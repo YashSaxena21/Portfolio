@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media_queries.css" />
+</head>
+<body>
+    <header>
+    <nav id="desktop-nav">
+        <div class="logo">Yash Saxena</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#research">Research Work</a></li>
+                <li><a href="#awards">Awards and Recognitions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div> 
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Yash Saxena</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#research" onclick="toggleMenu()">Research Work</a></li>
+                <li><a href="#awards" onclick="toggleMenu()">Awards and Recognitions</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+</header>
+<section id="profile">
+    <div class="profile-pic-container">
+        <div class="profile-pic">
+            <img src="./assests/profile-pic.png" alt="Yash Saxena Pic">
+        </div>
+    </div>
+    <div class="connect-collaborate-container">
+        <div id="connect-text">Let's Connect</div>
+        <div id="collaborate-text">Let's Collaborate</div>
+    </div>
+    <div class="social-links-container">
+        <a href="https://www.linkedin.com/in/yash-saxena-a18b251bb/" class="social-btn linkedin-btn">LinkedIn</a>
+        <a href="https://github.com/YashSaxena21" class="social-btn github-btn">GitHub</a>
+        <a href="./assests/YashSaxena_Academic_Resume.pdf" download="YashSaxena_Resume.pdf" class="social-btn twitter-btn">Resume</a>
+    </div>
+</section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Greetings! I'm Yash Saxena, a final year undergraduate student in India, specializing in Computer Science and Engineering with a focus on Artificial Intelligence and Machine Learning. I'm deeply passionate about research and eager to collaborate with esteemed professors in the field. Currently, I'm engaged in remote research internships, exploring the frontier of Large Language Models (LLMs) at the Artificial Intelligence Institute, University of South Carolina (AIISC). With prior experience in data science, NLP, and application development, gained from roles at Stareout Games, Celebal Technologies and HCLTech, I bring a diverse skill set to the table. My commitment to innovation has been recognized through awards like winning the UNESCO India Africa, Smart India Hackathon. Let's join forces and drive impactful research forward together.</p>
+    </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="date">Aug, 2023 - Present</div>
+                <div class="content">
+                    <h3>Remote Research Intern</h3>
+                    <p style="font-weight: bold;">Artificial Intelligence Institute, University of South Carolina (AIISC)</p>
+                        <ul>
+                            <li>Working on LLMs using libraries like Langchain, LLAMA Index</li>
+                            <li>Conducting research experiments on different LLMs like GPT-4, LLAMA-2, Mistral 7b and more using HuggingFace</li>
+                            <li>Built a web scraper to construct the main dataset of the ongoing research</li>
+                        </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="date">Jan, 2024 - Mar, 2024</div>
+                <div class="content">
+                    <h3>AI Engineer Intern</h3>
+                    <p style="font-weight: bold;">Stareout Games</p>
+                    <ul>
+                        <li>Built a pipeline incorporating Large Language and Image Generation Model to bring game ideas to life</li>
+                        <li>Fine-Tuned Large Language and Image Generation Models</li>
+                        <li>Worked with python libraries like Langchain, Ntscraper, Streamlit , and many more</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="date">May, 2023 - Jul, 2023</div>
+                <div class="content">
+                    <h3>Data Science Intern</h3>
+                    <p style="font-weight: bold;">Celebal Technologies</p>
+                    <ul>
+                        <li> Worked with large datasets, performed data pre-processing and extracted relevant features tailored to specific use cases</li>
+                        <li> Worked on NLP (Natural Language Processing) problems, built client specific applications using libraries like spacy</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="date">Nov, 2022 - Jan, 2023</div>
+                <div class="content">
+                    <h3>Intern</h3>
+                    <p style="font-weight: bold;">HCLTech</p>
+                    <ul>
+                        <li> Developed a Python-based Web app using spacy and streamlit libraries to extract text from resumes</li>
+                        <li> Created a web app that allowed users to filter resumes according to their specific requirements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <img src="./assests/project1.png" alt="Project 1">
+                <div class="project-info">
+                    <h3>Emotion Based Mental Health Classifier</h3>
+                    <ul>
+                        <li>Created a Mental Health Classifier which can detect and classify the mental state of a person into 3 categories namely Healthy, Moderate and Bad.</li>
+                        <li>Utilized DeepFace, K - means clustering and Support Vector Classifier algorithms to achieve the same</li>
+                    </ul>
+                    <a href="https://github.com/YashSaxena21/EMHC" target="_blank">GitHub Link</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="./assests/project2.png" alt="Project 2">
+                <div class="project-info">
+                    <h3>Twitter & Linkedin assisted Email Generation</h3>
+                    <ul>
+                        <li>A Webapp that scrapes the data from the Twitter & Linkedin feed of a user and assist the LLM in generating user specific emails</li>
+                        <li>Provides context to the LLM using the user's feed, generates job seeking and business collaboration emails</li>
+                        <li>Used python libraries like Ntscraper, Langchain, RapidApi, Streamlit etc.</li>
+                    </ul>
+                    <a href="https://github.com/YashSaxena21/Twitter-Generation" target="_blank">GitHub Link</a>
+                </div>
+            </div>
+            <!-- Add more project cards as needed -->
+        </div>
+    </section>        
+    <section id="research">
+        <h2>Research Work</h2>
+        <div class="research-subsection">
+            <h3><span>&#x1F4C3;</span> Published</h3>
+            <ul>
+                <li><span>&#x1F4D6;</span> Yash Saxena, Aman Kumar Mishra, Daksh Arora, Runumi Devi. 2023. ”Emotion Based Mental Health Classifier for NCR Based Engineering Students”. IEEE 6th International Conference on Contemporary Computing and Informatics (IC3I), Page(s):285-290.</li>
+                <!-- Add more items as needed -->
+            </ul>
+        </div>
+        <div class="research-subsection">
+            <h3><span>&#x1F4C4;</span> Communicated</h3>
+            <ul>
+                <li><span>&#x1F4D6;</span> Yash Saxena, Sarthak Chopra, Arunendra Mani Tripathi. ”Evaluating Consistency and Reasoning Capabilities of Large Language Models”. 3rd IEEE International Conference on Artificial Intelligence For Internet of Things (AIIoT)</li>
+                <!-- Add more items as needed -->
+            </ul>
+        </div>
+        <div class="research-subsection">
+            <h3><span>&#x1F4DD;</span> Working</h3>
+            <ul>
+                <li><span>&#x1F4D6;</span> Deepa Tilwani, Yash Saxena, Amit Sheth, Manas Gaur. ”REASONS: A benchmark for Retrieval and Automated Citations of Scientific Sentences using Public and Proprietary LLMs”. (To be submitted to ACL 2024)</li>
+                <!-- Add more items as needed -->
+            </ul>
+        </div>
+    </section>               
+    <section id="awards">
+        <h2><span>&#x1F3C6;</span> Awards and Recognitions</h2>
+        <div class="award-subsection">
+            <h3>2022</h3>
+            <ul>
+                <li><span>&#x1F947;</span>  UNESCO India Africa Hackathon Winner, Ministry of Education (MoE), India</li>
+                <li><span>&#x1F947;</span> Led a team of 5 members in the Grand Finale of Smart India Hackathon and won the event, Ministry of Education (MoE), India</li>
+                <!-- Add more awards as needed -->
+            </ul>
+        </div>
+        <div class="award-subsection">
+            <h3>2023</h3>
+            <ul>
+                <li><span>&#x1F947;</span> Led a team of 5 members in the Grand Finale of Smart India Hackathon, Ministry of Education (MoE), India</li>
+                <!-- Add more awards as needed -->
+            </ul>
+        </div>
+        <!-- Add more subsections as needed -->
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email ID : yashsaxena2111@gmail.com</p>
+    </section>    
+    <script src="script.js"></script>
+</body>
+</html>

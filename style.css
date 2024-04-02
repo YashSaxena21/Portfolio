@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;  
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* Transitions */
+a, .btn {
+    transition: all 300ms ease;
+}
+
+header {
+    background-color: #fff; /* Background color for the header */
+    padding: 10px 20px; /* Add padding top and bottom, adjust left and right */
+    border-bottom: 1px solid #ddd; /* Add border at the bottom */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the header is above other content */
+    height: 60px; /* Reduce the height of the header */
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Align content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Nav */
+nav, .nav-links{
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: gray;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181,181,181);
+}
+
+.logo {
+    font-size: 2rem;
+    margin-right: 400px;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+/* Hamburger */
+
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li{
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* Your existing styles */
+
+/* Profile Section */
+
+#profile {
+    display: flex;
+    height: 100vh;
+}
+
+.profile-pic-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+.connect-collaborate-container {
+    position: absolute;
+    top: 45%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1; /* Ensure it's above the profile picture and buttons */
+}
+
+.connect-collaborate-container span {
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.connect-collaborate-container .fade-in {
+    opacity: 1;
+}
+
+#connect-text,
+#collaborate-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem; /* Increase font size */
+    color: #0077b5; /* LinkedIn blue color */
+    font-family: 'Poppins', sans-serif; /* Change font family */
+    font-weight: bold; /* Make the text bold */
+    letter-spacing: 2px; /* Add letter spacing */
+    text-transform: uppercase; /* Convert text to uppercase */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+#connect-text.show,
+#collaborate-text.show {
+    opacity: 1;
+}
+
+
+
+.social-links-container {
+    flex: 1;
+    position: relative; /* Make it relative to allow absolute positioning of the connect-collaborate-container */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.linkedin-btn {
+    background-color: #0077b5;
+}
+
+.twitter-btn {
+    background-color: #008080;
+}
+
+.github-btn {
+    background-color: #333;
+}
+
+/* Additional styles for visual enhancement can be added here */
+/* About Me Section */
+#about {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    position: relative; /* Add position relative to enable absolute positioning */
+}
+
+#about h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+#about p {
+    font-size: 1.6rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+}
+
+/* Add subtle shaking animation */
+@keyframes shake {
+    0% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(-5px); }
+}
+
+#about {
+    animation: shake 5s ease infinite; /* Apply shaking animation */
+}
+
+/* Experience Section */
+
+
+#experience h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+/* Timeline container */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Timeline line */
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #0077b5; /* LinkedIn blue color */
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Individual timeline items */
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.timeline-item:hover .date, .timeline-item:hover .content {
+    transform: scale(1.05); /* Scale up on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.timeline-item .date {
+    position: relative;
+    width: 100px; /* Reduced width */
+    padding: 10px;
+    background-color: #0077b5; /* LinkedIn blue color */
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 2;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.timeline-item .content {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #0077b5; /* LinkedIn blue color */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.timeline-item h3 {
+    font-size: 1.8rem; /* Reduced font size */
+    color: #0077b5; /* LinkedIn blue color */
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    font-size: 1.4rem; /* Reduced font size */
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#projects {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+#projects h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+.project-card {
+    width: calc(80% - 20px); /* Adjust width of the cards */
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for box-shadow */
+    display: flex;
+    flex-direction: row; /* Ensure items inside are in a row */
+    height: auto;
+}
+
+.project-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Change box-shadow on hover */
+}
+
+.project-card img {
+    width: 30%; /* Fit the image within the specified dimensions */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px; /* Rounded corners on the left side */
+    margin-right: 20px; /* Add padding between image and text */
+    transition: transform 0.3s ease; /* Add transition for image */
+}
+
+.project-card:hover img {
+    transform: scale(1.05); /* Scale image on hover */
+}
+
+.project-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.project-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.project-info ul {
+    text-align: justify;
+    margin-bottom: 10px;
+    padding-left: 10%; /* Align bullet points to the left */
+}
+
+.project-info ul li {
+    font-size: 1.2rem;
+    text-align: left; /* Align text to the left */
+    padding-left: 5%;
+    padding-right: 5%; /* Add padding between image and bullet points */
+}
+
+.project-info a {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #0077b5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease; /* Add transition for button */
+}
+
+.project-info a:hover {
+    background-color: #005b8a;
+}
+
+#research {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#research h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.research-subsection {
+    margin-bottom: 40px;
+}
+
+.research-subsection h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.research-subsection h3 span {
+    margin-right: 10px;
+}
+
+
+#awards {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+
+#awards h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.award-subsection {
+    margin-bottom: 40px;
+}
+
+.award-subsection h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.award-subsection h3 span {
+    margin-right: 10px;
+}
+
+#research ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 10%; /* Remove default padding */
+}
+
+#research ul li {
+    margin-right: 10%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#research ul li span {
+    margin-right: 10px; /* Spacing between emoji and text */
+}
+
+#awards ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 10%; /* Remove default padding */
+}
+
+#awards ul li {
+    margin-right: 10%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#awards ul li span {
+    margin-right: 10px; /* Spacing between emoji and text */
+}
+
+#experience ul { 
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: left; /* Remove default padding */
+}
+
+
+#experience ul li span {
+    padding-left: 10%; /* Spacing between emoji and text */
+}
+
+
+/* Sections */
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+section p {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+/* Additional styles for visual enhancement can be added here */
+/* Existing CSS */
+
+/* Add media queries for responsiveness */
+@media screen and (max-width: 1199px) {
+    .logo {
+        margin-right: 20px; /* Reduce margin for smaller screens */
+    }
+
+    header nav {
+        display: none; /* Hide navigation links by default */
+    }
+
+    #hamburger-nav {
+        display: block; /* Display hamburger icon for smaller screens */
+        position: absolute; /* Position hamburger menu icon */
+        top: 50%; /* Vertically center the hamburger menu */
+        right: 15%;
+        left: 20px; /* Adjust right position */
+        transform: translateY(-50%);
+        z-index: 999; /* Ensure it's above other content */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack navigation links vertically */
+        position: absolute;
+        top: 60px; /* Adjust top position to avoid overlapping with header */
+        left: 0;
+        width: 100%;
+        background-color: #fff; /* Background color for navigation links */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+        z-index: 998; /* Ensure it's above other content */
+        display: none; /* Hide navigation links by default */
+    }
+
+    .nav-links.open {
+        display: flex; /* Show navigation links when hamburger menu is clicked */
+    }
+
+    .nav-links li {
+        width: 100%; /* Make navigation links full width */
+        text-align: center; /* Center-align navigation links */
+    }
+
+    .nav-links a {
+        padding: 15px 0; /* Add padding to navigation links for better touch experience */
+    }
+
+    .hamburger-menu {
+        display: block; /* Display hamburger menu icon */
+    }
+
+    .hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .hamburger-icon span {
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger-icon.open span:first-child {
+        transform: rotate(45deg) translate(10px, 5px);
+    }
+    .hamburger-icon.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-icon.open span:last-child {
+        transform: rotate(-45deg) translate(10px, -5px);
+    }
+
+    .hamburger-icon span:first-child {
+        transform: none;
+    }
+    .hamburger-icon span:first-child {
+        opacity: 1;
+    }
+    .hamburger-icon span:first-child {
+        transform: none;
+    }
+    #profile {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .profile-pic-container {
+        order: -1; /* Move profile pic container to the top */
+        margin-bottom: 10%; /* Add spacing between profile pic and text/buttons */
+    }
+
+    .social-links-container {
+        order: 1;
+        position: relative; /* Make it relative to allow absolute positioning of the connect-collaborate-container */
+        margin-top: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Move social links container below text/buttons */
+    }
+    
+    .connect-collaborate-container {
+         /* Reset transform */
+        margin-top: 10%;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 1; /* Add margin at the top */
+    }
+    .project-container {
+        flex-direction: column; /* Stack project cards vertically */
+        align-items: center; /* Center project cards horizontally */
+    }
+
+    .project-card {
+        width: 100%; /* Make project cards take full width */
+        max-width: 80%; /* Limit maximum width to avoid stretching on larger screens */
+        margin-bottom: 20px; /* Add spacing between project cards */
+    }
+
+    .project-card img {
+        width: 30%; /* Make project images take full width */
+        border-radius: 10px 10px 0 0; /* Adjust border-radius for the top corners */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add spacing between project image and info */
+    }
+
+    .project-info {
+        padding: 20px; /* Add padding to project info */
+        border-radius: 0 0 10px 10px; /* Adjust border-radius for the bottom corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    }
+    .research-subsection {
+        text-align: center; /* Center the subsection headings */
+    }
+
+    .research-subsection ul {
+        /* Ensure that the points start from the left */
+        text-align: left;
+        margin-left: 0%; /* Add left margin for indentation */
+        list-style-type: none; /* Remove default bullet points */
+        padding-left: 0; /* Remove default padding */
+    }
+
+    .research-subsection ul li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: left;
+    }
+
+    .research-subsection ul li span {
+        margin-right: 5%;
+        margin-left: 5%; /* Spacing between emoji and text */
+        padding: 0 5px; /* Padding around the emoji */
+    }
+
+    .award-subsection ul li span {
+        margin-right: 5%;
+        margin-left: 5%; /* Spacing between emoji and text */
+        padding: 0 5px; /* Padding around the emoji */
+    }
+}
+
+/* Additional styles for visual enhancement can be added here */
