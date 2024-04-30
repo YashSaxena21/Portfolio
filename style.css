@@ -255,44 +255,46 @@ a:hover {
 }
 
 .github-btn {
-    background-color: #333;
+    background-color: #DB4437;
 }
 
 /* Additional styles for visual enhancement can be added here */
 /* About Me Section */
+/* About Me Section */
 #about {
-    padding: 100px 0;
+    padding: 50px 0; /* Reduce padding for smaller screens */
     text-align: center;
     background-color: #f9f9f9;
-    position: relative; /* Add position relative to enable absolute positioning */
+    position: relative;
 }
 
 #about h2 {
-    font-size: 3rem;
-    margin-bottom: 50px;
+    font-size: 2rem; /* Reduce font size for smaller screens */
+    margin-bottom: 30px; /* Reduce margin bottom for smaller screens */
     color: #333;
 }
 
 #about p {
-    font-size: 1.6rem;
+    font-size: 1.4rem; /* Reduce font size for smaller screens */
     color: #555;
     line-height: 1.6;
-    margin-bottom: 50px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-bottom: 30px; /* Reduce margin bottom for smaller screens */
+    margin-left: 5%; /* Adjust margin left for smaller screens */
+    margin-right: 5%; /* Adjust margin right for smaller screens */
     text-align: justify;
 }
 
 /* Add subtle shaking animation */
 @keyframes shake {
-    0% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    100% { transform: translateX(-5px); }
+    0% { transform: translateX(-3px); } /* Reduce translation for smaller screens */
+    50% { transform: translateX(3px); } /* Reduce translation for smaller screens */
+    100% { transform: translateX(-3px); } /* Reduce translation for smaller screens */
 }
 
 #about {
     animation: shake 5s ease infinite; /* Apply shaking animation */
 }
+
 
 /* Experience Section */
 
@@ -696,27 +698,52 @@ section p {
         z-index: 1; /* Add margin at the top */
     }
     .project-container {
-        flex-direction: column; /* Stack project cards vertically */
-        align-items: center; /* Center project cards horizontally */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .project-card {
-        width: 100%; /* Make project cards take full width */
-        max-width: 80%; /* Limit maximum width to avoid stretching on larger screens */
-        margin-bottom: 20px; /* Add spacing between project cards */
+        width: 80%; /* Adjust width */
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column; /* Change direction to column */
     }
 
     .project-card img {
-        width: 30%; /* Make project images take full width */
-        border-radius: 10px 10px 0 0; /* Adjust border-radius for the top corners */
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 10px; /* Add spacing between project image and info */
+        width: 100%; /* Make image take full width */
+        height: auto; /* Allow image to resize proportionally */
+        border-radius: 10px 10px 0 0; /* Adjust border-radius */
     }
 
     .project-info {
-        padding: 20px; /* Add padding to project info */
-        border-radius: 0 0 10px 10px; /* Adjust border-radius for the bottom corners */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+        flex: 1;
+        padding: 20px;
+    }
+
+    .project-info h3 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .project-info ul {
+        text-align: justify;
+        margin-bottom: 10px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .project-info ul li {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    .project-info a {
+        font-size: 1.2rem;
     }
     .research-subsection {
         text-align: center; /* Center the subsection headings */
