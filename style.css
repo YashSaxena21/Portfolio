@@ -56,9 +56,10 @@ nav {
 }
 
 .nav-links {
-    gap: 2rem;
+    gap: 5%;
     list-style: none;
     font-size: 1.2rem;
+    margin-right: 10%;
 }
 
 a {
@@ -77,6 +78,7 @@ a:hover {
 .logo {
     font-size: 2rem;
     margin-right: 400px;
+    white-space: nowrap; /* Prevent line break */
 }
 
 .logo:hover {
@@ -125,7 +127,6 @@ a:hover {
     display: block;
     padding: 10px;
     text-align: center;
-    font-size: 1.5rem;
     color: black;
     text-decoration: none;
     transition: all 0.3 ease-in-out;
@@ -246,6 +247,21 @@ a:hover {
     transition: background-color 0.3s ease;
 }
 
+@media (max-width: 1199px) {
+
+    .social-btn {
+        font-size: 12px
+    }
+}
+
+/* Media query for small screens */
+@media (max-width: 767px) {
+
+    .social-btn {
+        font-size: 10px; /* Smaller paragraph font size */
+    }
+}
+
 .linkedin-btn {
     background-color: #0077b5;
 }
@@ -262,27 +278,47 @@ a:hover {
 /* About Me Section */
 /* About Me Section */
 #about {
-    padding: 50px 0; /* Reduce padding for smaller screens */
-    text-align: center;
-    background-color: #f9f9f9;
-    position: relative;
+    padding: 50px 0; /* Padding */
+    text-align: center; /* Centered text */
+    background-color: #f9f9f9; /* Background color */
+    position: relative; /* Positioning */
 }
 
 #about h2 {
-    font-size: 2rem; /* Reduce font size for smaller screens */
-    margin-bottom: 30px; /* Reduce margin bottom for smaller screens */
-    color: #333;
+    font-size: 2rem; /* Default font size */
+    white-space: nowrap; /* Prevent wrapping */
+    margin-bottom: 30px; /* Margin below heading */
+    color: #333; /* Heading color */
 }
 
 #about p {
-    font-size: 1.4rem; /* Reduce font size for smaller screens */
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 30px; /* Reduce margin bottom for smaller screens */
-    margin-left: 5%; /* Adjust margin left for smaller screens */
-    margin-right: 5%; /* Adjust margin right for smaller screens */
-    text-align: justify;
+    font-size: 1.4rem; /* Default paragraph font size */
+    color: #555; /* Paragraph color */
+    line-height: 1.6; /* Line height */
+    margin-bottom: 30px; /* Margin below paragraph */
+    margin-left: 5%; /* Left margin */
+    margin-right: 5%; /* Right margin */
+    text-align: justify; /* Justified text */
 }
+
+/* Media query for medium screens */
+@media (max-width: 1199px) {
+
+    #about p {
+        font-size: 1.2rem; /* Smaller paragraph font size */
+        margin-bottom: 20px; /* Reduced margin bottom */
+    }
+}
+
+/* Media query for small screens */
+@media (max-width: 767px) {
+
+    #about p {
+        font-size: 1rem; /* Smaller paragraph font size */
+        margin-bottom: 15px; /* Reduced margin bottom */
+    }
+}
+
 
 /* Add subtle shaking animation */
 @keyframes shake {
@@ -581,6 +617,40 @@ section p {
     font-size: 1.2rem;
 }
 
+/*Contact*/
+#contact {
+    padding: 50px 0; /* Padding */
+    text-align: center; /* Centered text */
+    position: relative; /* Positioning */
+}
+
+#contact p {
+    font-size: 1.4rem; /* Default paragraph font size */
+    line-height: 1.6; /* Line height */
+    margin-bottom: 30px; /* Margin below paragraph */
+    margin-left: 5%; /* Left margin */
+    margin-right: 5%; /* Right margin */
+    text-align: center; /* Justified text */
+}
+
+/* Media query for medium screens */
+@media (max-width: 1199px) {
+
+    #contact p {
+        font-size: 1.2rem; /* Smaller paragraph font size */
+        margin-bottom: 20px; /* Reduced margin bottom */
+    }
+}
+
+/* Media query for small screens */
+@media (max-width: 767px) {
+
+    #contact p {
+        font-size: 1rem; /* Smaller paragraph font size */
+        margin-bottom: 15px; /* Reduced margin bottom */
+    }
+}
+
 /* Additional styles for visual enhancement can be added here */
 /* Existing CSS */
 
@@ -681,10 +751,17 @@ section p {
     .social-links-container {
         order: 1;
         position: relative; /* Make it relative to allow absolute positioning of the connect-collaborate-container */
-        margin-top: 60%;
+        margin-top: 20%;
         display: flex;
         justify-content: center;
         align-items: center; /* Move social links container below text/buttons */
+    }
+
+    @media (max-width: 767px) {
+
+        .social-links-container {
+            margin-top: 60%;
+        }
     }
     
     .connect-collaborate-container {
