@@ -16,7 +16,7 @@
     <!-- Custom styles (note: folder name is 'assests') -->
     <link rel="stylesheet" href="assests/style.css" />
 
-    <!-- Button overrides, including better "Read more" visibility in dark mode -->
+    <!-- Button overrides + dark mode modal styling -->
     <style>
         :root {
             --accent-color: #f4b41a;
@@ -41,7 +41,7 @@
             color: #000;
         }
 
-        /* In dark mode, make "Read more" buttons stand out clearly on publication cards */
+        /* Make "Read more" buttons always clear on publication cards in dark mode */
         body.dark-mode .publication-card .btn-outline-accent {
             background-color: var(--accent-color);
             border-color: var(--accent-color);
@@ -49,6 +49,31 @@
         }
         body.dark-mode .publication-card .btn-outline-accent:hover {
             filter: brightness(0.9);
+        }
+
+        /* Dark mode styling for the modal that opens after clicking "Read more" */
+        body.dark-mode .modal-content {
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+        body.dark-mode .modal-header,
+        body.dark-mode .modal-footer {
+            border-color: #333333;
+        }
+        body.dark-mode .modal-title {
+            color: #ffffff;
+        }
+        body.dark-mode .modal-body p {
+            color: #e0e0e0;
+        }
+        /* Make the close icon visible on dark headers */
+        body.dark-mode .btn-close {
+            filter: invert(1);
+        }
+        /* Slightly darker, more opaque backdrop in dark mode */
+        body.dark-mode .modal-backdrop.show {
+            background-color: #000000;
+            opacity: 0.85;
         }
     </style>
 </head>
@@ -119,9 +144,9 @@
                     <h2 class="mb-3">About Me</h2>
                     <p>
                         I'm Yash Saxena, a Ph.D. student in Computer Science at the University of Maryland, Baltimore County.
-                        My research sits at the intersection of retrieval-augmented generation, interpretability, and source attribution.
+                        My research sits at the intersection of retrieval augmented generation, interpretability, and source attribution.
                         I focus on making each stage of a language agent (retrieval, evidence selection, and generation) transparent and verifiable,
-                        through interpretable retrievers, rationale-driven evidence selection, and citation schemes that balance coverage with correctness.
+                        through interpretable retrievers, rationale driven evidence selection, and citation schemes that balance coverage with correctness.
                         I care about language models that can show their work and earn trust in domains where mistakes actually matter.
                     </p>
                     <p>
@@ -196,7 +221,7 @@
                     <div class="focus-card h-100">
                         <div class="focus-icon"><i class="fas fa-search"></i></div>
                         <h5>Information Retrieval</h5>
-                        <p>Designing efficient retrieval and ranking algorithms to fetch relevant documents and passages that power retrieval-augmented generation.</p>
+                        <p>Designing efficient retrieval and ranking algorithms to fetch relevant documents and passages that power retrieval augmented generation.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6">
