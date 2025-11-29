@@ -1,205 +1,721 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="media_queries.css" />
-</head>
-<body>
-    <header>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XNBDDZ4B31"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title uses a simple hyphen instead of an en dash for accessibility -->
+    <title>Yash Saxena - Portfolio</title>
 
-    gtag('config', 'G-XNBDDZ4B31');
-    </script>
-    <nav id="desktop-nav">
-        <div class="logo">Yash Saxena</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#awards">Recognitions</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div> 
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Yash Saxena</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#research" onclick="toggleMenu()">Research</a></li>
-                <li><a href="#awards" onclick="toggleMenu()">Recognitions</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- AOS animation library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- AOS animation library removed for simplified animations -->
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#hero">Yash Saxena</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <!-- Replace Projects with Presentations -->
+                    <li class="nav-item"><a class="nav-link" href="#presentations">Presentations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <!-- Dark mode toggle button -->
+                    <li class="nav-item d-flex align-items-center ms-lg-2">
+                        <button id="darkModeToggle" class="btn btn-outline-accent btn-sm" type="button" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
-</header>
-<section id="profile">
-    <div class="profile-pic-container">
-        <div class="profile-pic">
-            <img src="./assests/profile-pic.png" alt="Yash Saxena Pic">
+
+    <!-- Hero Section -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container text-center" style="opacity:1;transform:none;">
+            <h1 class="display-4 fw-bold mb-2">Hi, I'm Yash</h1>
+            <!-- Dynamic text cycles through research focus areas to immediately highlight my specialties -->
+            <p class="h5 mb-3"><span id="typed-role"></span></p>
+            <p class="lead mb-4">
+My research focuses on designing <span class="text-accent">trustworthy language agents</span> that
+combine <span class="text-accent">NeuroSymbolic reasoning</span>,
+<span class="text-accent">information retrieval</span>, and
+<span class="text-accent">source attribution</span>.
+</p>
+
+            <div class="mb-4 d-flex flex-wrap justify-content-center gap-2">
+                <a href="#contact" class="btn btn-accent">Get in touch</a>
+                <a href="/home/oai/share/Yash_Resume.pdf" class="btn btn-outline-accent" download>Download Résumé</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://github.com/YashSaxena21" target="_blank" rel="noopener" class="me-3"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/yash-saxena-a18b251bb" target="_blank" rel="noopener" class="me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://scholar.google.com/citations?user=<REPLACE_WITH_ID>" target="_blank" rel="noopener"><i class="fas fa-graduation-cap fa-2x"></i></a>
+            </div>
         </div>
-    </div>
-    <div class="connect-collaborate-container">
-        <div id="connect-text">Let's Connect</div>
-        <div id="collaborate-text">Let's Collaborate</div>
-    </div>
-    <div class="social-links-container">
-        <a href="https://www.linkedin.com/in/yash-saxena-a18b251bb/" class="social-btn linkedin-btn">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=5c80BFkAAAAJ&hl=en" class="social-btn github-btn">Google Scholar</a>
-        <a href="./assests/Research_Resume_Yash.pdf" download="YashSaxena_Resume.pdf" class="social-btn twitter-btn">Resume</a>
-    </div>
-</section>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Greetings! I'm Yash Saxena, a final year undergraduate student in India, specializing in Computer Science and Engineering with a focus on Artificial Intelligence and Machine Learning. I'm deeply passionate about research and eager to collaborate with esteemed professors in the field. Currently, I'm engaged in remote research internships, exploring the frontier of Large Language Models (LLMs) at the Artificial Intelligence Institute, University of South Carolina (AIISC). With prior experience in data science, NLP, and application development, gained from roles at Stareout Games, Celebal Technologies and HCLTech, I bring a diverse skill set to the table. My commitment to innovation has been recognized through awards like winning the UNESCO India Africa, Smart India Hackathon. Let's join forces and drive impactful research forward together.</p>
     </section>
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="date">Aug, 2023 - Present</div>
-                <div class="content">
-                    <h3>Remote Research Intern</h3>
-                    <p style="font-weight: bold;">Artificial Intelligence Institute, University of South Carolina (AIISC)</p>
-                        <ul>
-                            <li>Working on LLMs using libraries like Langchain, LLAMA Index</li>
-                            <li>Conducting research experiments on different LLMs like GPT-4, LLAMA-2, Mistral 7b and more using HuggingFace</li>
-                            <li>Built a web scraper to construct the main dataset of the ongoing research</li>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-right">
+                    <!-- Profile photo -->
+                    <img src="assets/profile.png" alt="Profile photo" class="profile-photo w-100">
+                </div>
+                <div class="col-md-8" data-aos="fade-left">
+                    <h2 class="mb-3">About Me</h2>
+                    <p>
+    I'm Yash Saxena, a Ph.D. student in Computer Science at the University of Maryland, Baltimore County.
+    My research sits at the intersection of retrieval-augmented generation, interpretability, and source attribution.
+    I focus on making each stage of a language agent (retrieval, evidence selection, and generation) transparent and verifiable,
+    through interpretable retrievers, rationale-driven evidence selection, and citation schemes that balance coverage with correctness.
+    I care about language models that can show their work and earn trust in domains where mistakes actually matter.
+</p>
+<p>
+    Before my Ph.D., I completed a B.Tech. in Computer Science and Engineering (AI & ML) at Galgotias University.
+    I have worked on projects in mental health classification, game content generation, and legal tech,
+    in roles that combine research and engineering.
+    I enjoy mentoring undergraduate researchers, collaborating with interdisciplinary teams,
+    and turning ideas into practical tools.
+    Outside of research, you will usually find me exploring music, reading about neuroscience, or at a hackathon.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+        <div class="container" data-aos="fade-up">
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="counter-card h-100">
+                        <div class="icon"><i class="fas fa-book-open"></i></div>
+                        <span class="counter" data-target="4">0</span>
+                        <p class="mt-2">Publications</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="counter-card h-100">
+                        <div class="icon"><i class="fas fa-microphone"></i></div>
+                        <span class="counter" data-target="2">0</span>
+                        <p class="mt-2">Presentations</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="counter-card h-100">
+                        <div class="icon"><i class="fas fa-trophy"></i></div>
+                        <span class="counter" data-target="3">0</span>
+                        <p class="mt-2">Awards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Focus Section -->
+    <section id="research" class="py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="mb-4 text-center">Research Focus</h2>
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6">
+                    <div class="focus-card h-100">
+                        <div class="focus-icon"><i class="fas fa-cubes-stacked"></i></div>
+                        <h5>NeuroSymbolic AI</h5>
+                        <p>Bridging neural networks and symbolic reasoning to build hybrid, interpretable systems that combine structured knowledge with deep learning.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="focus-card h-100">
+                        <div class="focus-icon"><i class="fas fa-book"></i></div>
+                        <h5>Source Attribution</h5>
+                        <p>Developing reliable citation techniques and evidence selection methods that ensure every statement in generated text is traceable to its origin.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="focus-card h-100">
+                        <div class="focus-icon"><i class="fas fa-shield-check"></i></div>
+                        <h5>Trustworthy AI</h5>
+                        <p>Building AI systems that are transparent, robust and fair, focusing on interpretability, safety and user confidence in automated decisions.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="focus-card h-100">
+                        <div class="focus-icon"><i class="fas fa-search"></i></div>
+                        <h5>Information Retrieval</h5>
+                        <p>Designing efficient retrieval and ranking algorithms to fetch relevant documents and passages that power retrieval-augmented generation.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="focus-card h-100">
+                        <div class="focus-icon"><i class="fas fa-language"></i></div>
+                        <h5>NLP</h5>
+                        <p>Exploring natural language processing from sentiment analysis to language generation, with a focus on large language models and reasoning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container" data-aos="fade-up">
+            <h2 class="mb-4 text-center">Skills</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="p-4 shadow-sm rounded skills-card h-100">
+                        <h5 class="mb-3"><i class="fas fa-magnifying-glass-chart me-2"></i>Retrieval &amp; RAG</h5>
+                        <ul class="list-unstyled">
+                            <li>Chunking &amp; query reformulation</li>
+                            <li>Dense &amp; sparse retrieval</li>
+                            <li>FAISS / HNSW indexing</li>
                         </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="date">Jan, 2024 - Mar, 2024</div>
-                <div class="content">
-                    <h3>AI Engineer Intern</h3>
-                    <p style="font-weight: bold;">Stareout Games</p>
-                    <ul>
-                        <li>Built a pipeline incorporating Large Language and Image Generation Model to bring game ideas to life</li>
-                        <li>Fine-Tuned Large Language and Image Generation Models</li>
-                        <li>Worked with python libraries like Langchain, Ntscraper, Streamlit , and many more</li>
-                    </ul>
+                <div class="col-md-4">
+                    <div class="p-4 shadow-sm rounded skills-card h-100">
+                        <h5 class="mb-3"><i class="fas fa-brain me-2"></i>LLM Tuning</h5>
+                        <ul class="list-unstyled">
+                            <li>Instruction tuning (SFT)</li>
+                            <li>Preference tuning (PPO, DPO, GRPO)</li>
+                            <li>PEFT (LoRA / QLoRA)</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="date">May, 2023 - Jul, 2023</div>
-                <div class="content">
-                    <h3>Data Science Intern</h3>
-                    <p style="font-weight: bold;">Celebal Technologies</p>
-                    <ul>
-                        <li> Worked with large datasets, performed data pre-processing and extracted relevant features tailored to specific use cases</li>
-                        <li> Worked on NLP (Natural Language Processing) problems, built client specific applications using libraries like spacy</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="date">Nov, 2022 - Jan, 2023</div>
-                <div class="content">
-                    <h3>Intern</h3>
-                    <p style="font-weight: bold;">HCLTech</p>
-                    <ul>
-                        <li> Developed a Python-based Web app using spacy and streamlit libraries to extract text from resumes</li>
-                        <li> Created a web app that allowed users to filter resumes according to their specific requirements</li>
-                    </ul>
+                <div class="col-md-4">
+                    <div class="p-4 shadow-sm rounded skills-card h-100">
+                        <h5 class="mb-3"><i class="fas fa-toolbox me-2"></i>Tools &amp; Libraries</h5>
+                        <ul class="list-unstyled">
+                            <li>PyTorch, Hugging Face (Transformers, PEFT)</li>
+                            <li>LlamaIndex, LangChain</li>
+                            <li>FAISS, SQL, Git</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>    
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-container">
-            <div class="project-card">
-                <img src="./assests/project1.png" alt="Project 1">
-                <div class="project-info">
-                    <h3>Emotion Based Mental Health Classifier</h3>
-                    <ul>
-                        <li>Created a Mental Health Classifier which can detect and classify the mental state of a person into 3 categories namely Healthy, Moderate and Bad.</li>
-                        <li>Utilized DeepFace, K - means clustering and Support Vector Classifier algorithms to achieve the same</li>
-                    </ul>
-                    <a href="https://github.com/YashSaxena21/EMHC" target="_blank">GitHub Link</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="./assests/project2.png" alt="Project 2">
-                <div class="project-info">
-                    <h3>Twitter & Linkedin assisted Email Generation</h3>
-                    <ul>
-                        <li>A Webapp that scrapes the data from the Twitter & Linkedin feed of a user and assist the LLM in generating user specific emails</li>
-                        <li>Provides context to the LLM using the user's feed, generates job seeking and business collaboration emails</li>
-                        <li>Used python libraries like Ntscraper, Langchain, RapidApi, Streamlit etc.</li>
-                    </ul>
-                    <a href="https://github.com/YashSaxena21/Twitter-Generation" target="_blank">GitHub Link</a>
-                </div>
-            </div>
-            <!-- Add more project cards as needed -->
-        </div>
-    </section>        
-    <section id="research">
-        <h2>Research Work</h2>
-        <div class="research-subsection">
-            <h3><span>&#x1F4C3;</span> Published</h3>
-            <ul>
-                <li><span>&#x1F4D6;</span> Yash Saxena, Sarthak Chopra, Arunendra Mani Tripathi. ”Evaluating Consistency and Reasoning Capabilities of Large LanguageModels”. 2024 Second International Conference on Data Science and Information System (ICDSIS)</li>
-                <li><span>&#x1F4D6;</span> Yash Saxena, Aman Kumar Mishra, Daksh Arora, Runumi Devi. 2023. ”Emotion Based Mental Health Classifier for NCR Based Engineering Students”. IEEE 6th International Conference on Contemporary Computing and Informatics (IC3I), Page(s):285-290.</li>
-                <!-- Add more items as needed -->
-            </ul>
-        </div>
-        <div class="research-subsection">
-            <h3><span>&#x1F4C4;</span> Communicated</h3>
-            <ul>
-                <li><span>&#x1F4D6;</span> Seyedreza Mohseni, Seyedali Mohammadi, Deepa Tilwani, Gerald Ketu Ndawula, Sriram Vema, Yash Saxena, Edward Raff, ManasGaur. ”Can LLMs ObfuscateCode? A Systematic Analysis of Large Language Models into Assembly Code Obfuscation”. (Communicated in AAAI 2025)</li>
-                <li><span>&#x1F4D6;</span> Deepa Tilwani, Yash Saxena, Amit Sheth, Manas Gaur. ”REASONS: A benchmark for Retrieval and Automated Citations of Scientific Sentences using Public and Proprietary LLMs”. (Communicated in EMNLP 2024)</li>
-                <!-- Add more items as needed -->
-            </ul>
-        </div>
-        <div class="research-subsection">
-            <h3><span>&#x1F4DD;</span> Working</h3>
-            <ul>
-                
-                <li><span>&#x1F4D6;</span> Yash Saxena, Manas Gaur. "Dual LLMs in Legal Debate: Fine-Tuned Models for Citation-Based Reasoning and Judgment". </li>
-                <!-- Add more items as needed -->
-            </ul>
-        </div>
-    </section>               
-    <section id="awards">
-        <h2><span>&#x1F3C6;</span> Awards and Recognitions</h2>
-        <div class="award-subsection">
-            <h3>2022</h3>
-            <ul>
-                <li><span>&#x1F947;</span>  UNESCO India Africa Hackathon Winner, Ministry of Education (MoE), India</li>
-                <li><span>&#x1F947;</span> Led a team of 5 members in the Grand Finale of Smart India Hackathon and won the event, Ministry of Education (MoE), India</li>
-                <!-- Add more awards as needed -->
-            </ul>
-        </div>
-        <div class="award-subsection">
-            <h3>2023</h3>
-            <ul>
-                <li><span>&#x1F947;</span> Led a team of 5 members in the Grand Finale of Smart India Hackathon, Ministry of Education (MoE), India</li>
-                <!-- Add more awards as needed -->
-            </ul>
-        </div>
-        <!-- Add more subsections as needed -->
     </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email ID : yashsaxena2111@gmail.com</p>
-    </section>    
-    <script src="script.js"></script>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="mb-4 text-center">Education</h2>
+            <div class="timeline">
+                <!-- Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-university"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="mb-1">University of Maryland, Baltimore County</h5>
+                        <p class="small text-muted mb-1">Ph.D. in Computer Science (Jan 2025 - Present)</p>
+                        <p class="mb-0">Research Assistant working on interpretable retrieval for trustworthy LLMs; GPA 4.0/4.0.</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="mb-1">Galgotias University, India</h5>
+                        <p class="small text-muted mb-1">B.Tech. in CSE (AI & ML) (Nov 2020 - May 2024)</p>
+                        <p class="mb-0">Completed coursework with a CGPA of 8.75/10, focusing on artificial intelligence and machine learning.</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-school"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="mb-1">Bishop Conrad Sr. Sec. School</h5>
+                        <p class="small text-muted mb-1">Senior Secondary (XII) (May 2018 - May 2019)</p>
+                        <p class="mb-0">Graduated with 83.20 % in Physics, Chemistry & Mathematics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5 bg-light">
+        <div class="container" data-aos="fade-up">
+            <h2 class="mb-4 text-center">Professional Experience</h2>
+            <div class="timeline">
+                <!-- Remote Research Intern -->
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-flask"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="mb-1">Knowledge Infused AI & Inference Lab, UMBC</h5>
+                        <p class="small text-muted mb-1">Remote Research Intern (Aug 2024 - Jan 2025)</p>
+                        <ul>
+                            <li>Fine-tuned Llama-3-70B using the DPO algorithm and developed a RAG pipeline.</li>
+                            <li>Designed and ran experiments on large-scale GPU clusters via Slurm.</li>
+                            <li>Collaborated with faculty to advance research on interpretable retrieval.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- AI Engineer Intern -->
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-gamepad"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="mb-1">Stareout Games</h5>
+                        <p class="small text-muted mb-1">AI Engineer Intern (Jan 2024 - Mar 2024)</p>
+                        <ul>
+                            <li>Developed pipelines combining LLMs and generative models to bring game ideas to life.</li>
+                            <li>Fine-tuned language and image generation models for interactive experiences.</li>
+                            <li>Utilised LangChain, Ntscraper, Streamlit and other Python libraries.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Remote Research Intern AIISC -->
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-robot"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="mb-1">Artificial Intelligence Institute, University of South Carolina</h5>
+                        <p class="small text-muted mb-1">Remote Research Intern (Aug 2023 - Jul 2024)</p>
+                        <ul>
+                            <li>Explored LLMs using frameworks like LangChain and LlamaIndex.</li>
+                            <li>Built web scrapers to construct datasets for ongoing research.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Data Science Intern -->
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="mb-1">Celebal Technologies</h5>
+                        <p class="small text-muted mb-1">Data Science Intern (May 2023 - Jul 2023)</p>
+                        <ul>
+                            <li>Processed large datasets and engineered features tailored to specific use cases.</li>
+                            <li>Developed NLP applications using spaCy and other libraries.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- HCLTech Intern -->
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="mb-1">HCLTech</h5>
+                        <p class="small text-muted mb-1">Intern (Nov 2022 - Jan 2023)</p>
+                        <ul>
+                            <li>Developed a Python-based web app using spaCy and Streamlit to extract information from résumés.</li>
+                            <li>Built an application enabling HR teams to filter résumés by custom criteria.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentations Section -->
+    <section id="presentations" class="py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="mb-4 text-center">Presentations &amp; Talks</h2>
+            <div class="row g-4">
+                <!-- UMBC AI Symposium Presentation -->
+                <div class="col-md-6">
+                    <div class="presentation-card p-4 shadow-sm rounded h-100">
+                        <h5 class="mb-2">Building Trustworthy LLM Agents for Academia</h5>
+                        <p class="small">Presented at the UMBC AI Symposium, this talk outlines the pillars of trust: interpretability, robustness and credibility. It covers interpretable retrieval (IMRNNs), rationale-driven reranking (METEORA) and citation paradigms like G-Cite and P-Cite. The talk demonstrates improved recall and precision, discusses trade-offs between coverage and correctness, and highlights a robust, transparent pipeline for academic research.</p>
+                        <a href="https://youtu.be/XiwwPS-hNXo?si=ytzEk9EGE7ADuV7C" target="_blank" class="text-decoration-none">Watch Video&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <!-- Bloomberg Law AI Symposium Presentation -->
+                <div class="col-md-6">
+                    <div class="presentation-card p-4 shadow-sm rounded h-100">
+                        <h5 class="mb-2">RASOR: Contextual Legal Intelligence</h5>
+                        <p class="small">At Bloomberg Law’s AI Symposium on the future of legal technology, I presented <em>RASOR: Contextual Legal Intelligence via Rationalized Selection and Refinement in RAG</em> alongside collaborators. The symposium convened legal and AI experts to explore how retrieval-augmented systems can provide contextual legal intelligence using rationalized selection and refinement to improve citation quality in legal tasks.</p>
+                        <a href="https://pro.bloomberglaw.com/insights/company-news/bloomberg-law-hosts-ai-symposium-exploring-the-future-of-legal-technology/#:~:text=RASOR%3A%20Contextual%20Legal%20Intelligence%20via%20Rationalized%20Selection%20and%20Refinement%20in%20RAG" target="_blank" class="text-decoration-none">Event Article&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-5 bg-light">
+        <div class="container" data-aos="fade-up">
+            <h2 class="mb-4 text-center">Publications &amp; Preprints</h2>
+            <p class="text-center mb-4">A selection of my research papers with summaries and keywords. Click the titles to read more.</p>
+            <div class="row g-4">
+                <!-- Generation-Time vs. Post-hoc Citation -->
+                <div class="col-md-6">
+                    <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+                        <h5 class="mb-2"><a href="https://arxiv.org/abs/2509.21557" target="_blank" class="text-decoration-none">Generation-Time vs. Post-hoc Citation</a></h5>
+                        <p class="small flex-grow-1"><strong>NeurIPS LLM Evaluation Workshop 2025.</strong> This paper compares two citation paradigms: Generation-Time Citation (G-Cite) and Post-hoc Citation (P-Cite) across multiple attribution datasets. It shows that retrieval quality drives attribution quality, that P-Cite offers higher coverage with competitive correctness, and recommends a retrieval-centric, P-Cite-first approach for high-stakes domains.</p>
+                        <p class="small mb-2">
+                            <span class="badge bg-secondary me-1">LLM attribution</span>
+                            <span class="badge bg-secondary me-1">citations</span>
+                            <span class="badge bg-secondary">evaluation</span>
+                        </p>
+                        <div class="mt-3 text-end">
+                            <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-gcite">Read more</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Evaluating Consistency and Reasoning Capabilities -->
+                <div class="col-md-6">
+                    <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+                        <h5 class="mb-2"><a href="https://arxiv.org/abs/2404.16478" target="_blank" class="text-decoration-none">Evaluating Consistency &amp; Reasoning of LLMs</a></h5>
+                        <p class="small flex-grow-1"><strong>2nd International Conference on Data Science &amp; Information Systems 2024.</strong> This study evaluates the consistency and reasoning abilities of public and proprietary LLMs using the Boolq dataset. Models are assessed with metrics like BERT, BLEU and F-1 on generated explanations and answers, revealing that proprietary models outperform public ones yet none achieve high scores for both consistency and reasoning.</p>
+                        <p class="small mb-2">
+                            <span class="badge bg-secondary me-1">LLM consistency</span>
+                            <span class="badge bg-secondary me-1">reasoning</span>
+                            <span class="badge bg-secondary">evaluation</span>
+                        </p>
+                        <div class="mt-3 text-end">
+                            <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-consistency">Read more</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Can LLMs Obfuscate Code? -->
+                <div class="col-md-6">
+                    <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+                        <h5 class="mb-2"><a href="https://doi.org/10.1609/aaai.v39i23.34672" target="_blank" class="text-decoration-none">Can LLMs Obfuscate Code?</a></h5>
+                        <p class="small flex-grow-1"><strong>AAAI 2025.</strong> This study asks whether LLMs can generate obfuscated assembly code and presents the MetamorphASM benchmark with a dataset of 328,200 obfuscated samples. By evaluating multiple LLMs across obfuscation techniques such as dead code, register substitution and control-flow change, the authors show that LLMs can produce obfuscated code, posing security risks for anti-virus tools.</p>
+                        <p class="small mb-2">
+                            <span class="badge bg-secondary me-1">code obfuscation</span>
+                            <span class="badge bg-secondary me-1">LLM security</span>
+                            <span class="badge bg-secondary">malware</span>
+                        </p>
+                        <div class="mt-3 text-end">
+                            <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-obfuscation">Read more</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Emotion-Based Mental Health Classifier -->
+                <div class="col-md-6">
+                    <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+                        <h5 class="mb-2"><a href="https://doi.org/10.1109/IC3I59117.2023.10397910" target="_blank" class="text-decoration-none">Emotion-Based Mental Health Classifier</a></h5>
+                        <p class="small flex-grow-1"><strong>IEEE IC3I 2023.</strong> This work presents a machine learning pipeline to detect and classify the mental state of engineering students using social media text. It combines sentiment analysis with models such as RNN, GRU and SVM to identify emotions and support early detection of mental health issues.</p>
+                        <p class="small mb-2">
+                            <span class="badge bg-secondary me-1">mental health</span>
+                            <span class="badge bg-secondary me-1">sentiment analysis</span>
+                            <span class="badge bg-secondary">emotion classification</span>
+                        </p>
+                        <div class="mt-3 text-end">
+                            <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-mentalhealth">Read more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Under Review & In Preparation -->
+            <h4 class="mt-5 mb-3">Works Under Review &amp; In Preparation</h4>
+            <div class="row g-4">
+                <!-- Ranking Free RAG -->
+                <div class="col-md-4">
+                    <div class="publication-card p-4 shadow-sm rounded h-100">
+                        <h6 class="mb-1">Ranking Free RAG</h6>
+                        <p class="small">Under review (ICLR 2026). Proposes replacing re-ranking with a selection mechanism in retrieval-augmented generation, aiming to improve fairness and transparency in sensitive domains by selecting evidence based on rationales rather than top-k ranking.</p>
+                        <p class="small">
+                            <span class="badge bg-secondary me-1">RAG</span>
+                            <span class="badge bg-secondary me-1">fairness</span>
+                            <span class="badge bg-secondary">sensitive domains</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- IMRNNs Efficient Modulation -->
+                <div class="col-md-4">
+                    <div class="publication-card p-4 shadow-sm rounded h-100">
+                        <h6 class="mb-1">IMRNNs: Efficient Embedding Modulation</h6>
+                        <p class="small">Under review (EACL 2026). Extends interpretable retrieval by introducing efficient embedding modulation techniques that produce token-level explanations while reducing computational overhead in dense retrieval.</p>
+                        <p class="small">
+                            <span class="badge bg-secondary me-1">interpretable retrieval</span>
+                            <span class="badge bg-secondary me-1">efficient embedding</span>
+                            <span class="badge bg-secondary">dense retrieval</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- Attribution in Scientific Literature -->
+                <div class="col-md-4">
+                    <div class="publication-card p-4 shadow-sm rounded h-100">
+                        <h6 class="mb-1">Attribution in Scientific Literature</h6>
+                        <p class="small">In preparation. Introduces a benchmark and methods for evaluating source attribution in scientific literature, aiming to improve citation coverage and correctness in generative models.</p>
+                        <p class="small">
+                            <span class="badge bg-secondary me-1">source attribution</span>
+                            <span class="badge bg-secondary me-1">benchmarking</span>
+                            <span class="badge bg-secondary">citations</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="mb-4 text-center">Awards &amp; Recognitions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <ul class="list-unstyled timeline-awards">
+                        <li>
+                            <span class="badge bg-accent me-2">2023</span>
+                            Led a team in the Grand Finale of the Smart India Hackathon (Ministry of Education, India).
+                        </li>
+                        <li>
+                            <span class="badge bg-accent me-2">2022</span>
+                            Winner of the UNESCO India-Africa Hackathon (Ministry of Education, India).
+                        </li>
+                        <li>
+                            <span class="badge bg-accent me-2">2022</span>
+                            Led a team of five in the Grand Finale of the Smart India Hackathon and won the event.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publication Detail Modals -->
+    <!-- G-Cite vs. P-Cite Modal -->
+    <div class="modal fade" id="modal-gcite" tabindex="-1" aria-labelledby="modalGciteLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalGciteLabel">Generation-Time vs. Post-hoc Citation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>In this work, we investigate two paradigms for citing sources in generated text: Generation-Time Citation (G-Cite) and Post-hoc Citation (P-Cite). G-Cite annotates evidence as text is produced, whereas P-Cite retrospectively links generated answers to retrieved documents. Through experiments on multiple attribution datasets we show that citation quality is largely governed by the quality of retrieval. P-Cite yields higher coverage and competitive correctness compared to G-Cite, demonstrating that post-hoc approaches can provide more complete attribution while remaining precise. Our analysis suggests adopting a retrieval-centric, P-Cite-first strategy in high-stakes domains, where transparency and completeness of citations are paramount.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consistency & Reasoning Modal -->
+    <div class="modal fade" id="modal-consistency" tabindex="-1" aria-labelledby="modalConsistencyLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalConsistencyLabel">Evaluating Consistency &amp; Reasoning of LLMs</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This paper benchmarks the consistency and reasoning abilities of large language models using the Boolq dataset. We assess both public and proprietary models across metrics including BERT-score, BLEU and F-1 on generated explanations and answers. Results reveal that proprietary models outperform open-source alternatives; however, no model excels at both consistency and reasoning simultaneously. The findings underscore gaps in current evaluation and highlight the need for models that can both reason and maintain internal consistency across tasks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Obfuscation Modal -->
+    <div class="modal fade" id="modal-obfuscation" tabindex="-1" aria-labelledby="modalObfuscationLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalObfuscationLabel">Can LLMs Obfuscate Code?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Addressing a growing cybersecurity question, this work introduces <em>MetamorphASM</em>, a benchmark of 328,200 obfuscated assembly code snippets, to evaluate whether LLMs can generate obfuscated malware. We test models under various obfuscation techniques, including dead code insertion, register substitution and control-flow manipulation, and find that LLMs are capable of producing obfuscated code that challenges static analysis tools. The study emphasises the dual-use nature of LLMs and calls for developing safeguards to mitigate malicious applications.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mental Health Modal -->
+    <div class="modal fade" id="modal-mentalhealth" tabindex="-1" aria-labelledby="modalMentalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMentalLabel">Emotion-Based Mental Health Classifier</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This paper presents a sentiment-driven machine learning pipeline for identifying the mental state of engineering students from social media posts. By combining sentiment analysis with recurrent neural networks (RNNs), gated recurrent units (GRUs) and support vector machines (SVMs), the system classifies emotions into categories such as anxiety, joy and sadness. The approach seeks to facilitate early detection of mental health concerns and encourage proactive support within academic communities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container" data-aos="fade-up">
+            <h2 class="mb-4 text-center">Contact</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <p class="lead">Have a project in mind or want to collaborate? Feel free to reach out!</p>
+                    <p><i class="fas fa-envelope me-2"></i><a href="mailto:ysaxena1@umbc.edu" class="text-decoration-none">ysaxena1@umbc.edu</a></p>
+                    <div class="social-icons mt-3">
+                        <a href="https://github.com/YashSaxena21" target="_blank" class="me-3"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="https://www.linkedin.com/in/yash-saxena-a18b251bb" target="_blank" class="me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="https://scholar.google.com/citations?user=<REPLACE_WITH_ID>" target="_blank"><i class="fas fa-graduation-cap fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <div id="scrollTopBtn"><i class="fas fa-chevron-up"></i></div>
+
+    <!-- Footer -->
+    <footer class="py-3 border-top">
+        <div class="container text-center">
+            <small>&copy; <span id="year"></span> Yash Saxena. All rights reserved.</small>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // initialise AOS animations if the library is loaded
+        if (window.AOS) {
+            AOS.init({
+                once: true,
+                duration: 800,
+                easing: 'ease-out-cubic'
+            });
+        }
+
+        // update year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Dark mode toggle functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.getElementById('darkModeToggle');
+            // helper to set theme and update icon
+            function setTheme(mode) {
+                if (mode === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    toggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    document.body.classList.remove('dark-mode');
+                    toggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            }
+            // read theme from localStorage
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme) {
+                setTheme(storedTheme);
+            } else {
+                // use system preference if available
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                setTheme(prefersDark ? 'dark' : 'light');
+            }
+            // attach click handler
+            toggle.addEventListener('click', function () {
+                const isDark = document.body.classList.contains('dark-mode');
+                const newTheme = isDark ? 'light' : 'dark';
+                setTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        });
+
+        // Simple typing effect for research topics.  The text cycles through
+        // the major areas of my research (NeuroSymbolic AI, Source Attribution, Trustworthy AI,
+        // Information Retrieval and NLP).  It avoids em/en dashes and uses regular hyphens.
+        document.addEventListener('DOMContentLoaded', function () {
+            const topics = ['NeuroSymbolic AI', 'Source Attribution', 'Trustworthy AI', 'Information Retrieval', 'NLP'];
+            let topicIndex = 0;
+            let charIndex = 0;
+            const typedEl = document.getElementById('typed-role');
+            function type() {
+                const current = topics[topicIndex];
+                typedEl.textContent = current.substring(0, charIndex + 1);
+                charIndex++;
+                if (charIndex === current.length) {
+                    // pause before erasing
+                    setTimeout(erase, 1800);
+                } else {
+                    setTimeout(type, 100);
+                }
+            }
+            function erase() {
+                const current = topics[topicIndex];
+                typedEl.textContent = current.substring(0, charIndex - 1);
+                charIndex--;
+                if (charIndex === 0) {
+                    topicIndex = (topicIndex + 1) % topics.length;
+                    setTimeout(type, 600);
+                } else {
+                    setTimeout(erase, 50);
+                }
+            }
+            // Start typing effect after a brief delay
+            setTimeout(type, 500);
+        });
+
+        // Counter animation using IntersectionObserver
+        document.addEventListener('DOMContentLoaded', function () {
+            const counters = document.querySelectorAll('.counter');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const target = parseInt(el.getAttribute('data-target'), 10);
+                        let count = 0;
+                        const step = Math.max(1, Math.floor(target / 100));
+                        const updateCounter = () => {
+                            count += step;
+                            el.textContent = count;
+                            if (count < target) {
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                el.textContent = target;
+                            }
+                        };
+                        updateCounter();
+                        observer.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.5 });
+            counters.forEach(counter => observer.observe(counter));
+        });
+
+        // Scroll to top button functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const scrollBtn = document.getElementById('scrollTopBtn');
+            window.addEventListener('scroll', () => {
+                if (document.documentElement.scrollTop > 300) {
+                    scrollBtn.classList.add('show');
+                } else {
+                    scrollBtn.classList.remove('show');
+                }
+            });
+            scrollBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+
+        // Add interactive tilt effect to research focus cards on desktop devices.  The effect
+        // slightly rotates cards based on mouse position to add a sense of depth.  It is
+        // disabled on touch devices to avoid unintended interactions.
+        document.addEventListener('DOMContentLoaded', function () {
+            const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            if (!isTouch) {
+                const cards = document.querySelectorAll('.focus-card');
+                cards.forEach(card => {
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        // Calculate rotation relative to center (max 8 degrees)
+                        const rotateX = ((y / rect.height) - 0.5) * 8;
+                        const rotateY = ((x / rect.width) - 0.5) * -8;
+                        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = '';
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
