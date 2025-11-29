@@ -13,10 +13,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- AOS animation library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <!-- AOS animation library removed for simplified animations -->
-    <!-- Custom styles -->
-    <!-- Fix 2: use existing 'assests' folder -->
+    <!-- Custom styles (note: folder name is 'assests') -->
     <link rel="stylesheet" href="assests/style.css" />
+
+    <!-- Override styles to fix "Read more" buttons in dark mode -->
+    <style>
+        :root {
+            /* Use the same accent color throughout buttons */
+            --accent-color: #f4b41a;
+        }
+
+        .btn-accent {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: #000;
+        }
+        .btn-accent:hover {
+            filter: brightness(0.9);
+        }
+
+        .btn-outline-accent {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            background-color: transparent;
+        }
+        .btn-outline-accent:hover {
+            background-color: var(--accent-color);
+            color: #000;
+        }
+
+        /* Ensure "Read more" and other outline accent buttons stay visible in dark mode */
+        body.dark-mode .btn-outline-accent {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            background-color: transparent;
+        }
+        body.dark-mode .btn-outline-accent:hover {
+            background-color: var(--accent-color);
+            color: #000;
+        }
+    </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
     <!-- Navigation -->
@@ -32,7 +68,6 @@
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <!-- Replace Projects with Presentations -->
                     <li class="nav-item"><a class="nav-link" href="#presentations">Presentations</a></li>
                     <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
@@ -52,18 +87,18 @@
     <section id="hero" class="d-flex align-items-center">
         <div class="container text-center" style="opacity:1;transform:none;">
             <h1 class="display-4 fw-bold mb-2">Hi, I'm Yash</h1>
-            <!-- Dynamic text cycles through research focus areas to immediately highlight my specialties -->
+            <!-- Dynamic text cycles through research focus areas -->
             <p class="h5 mb-3"><span id="typed-role"></span></p>
             <p class="lead mb-4">
-My research focuses on designing <span class="text-accent">trustworthy language agents</span> that
-combine <span class="text-accent">NeuroSymbolic reasoning</span>,
-<span class="text-accent">information retrieval</span>, and
-<span class="text-accent">source attribution</span>.
-</p>
+                My research focuses on designing <span class="text-accent">trustworthy language agents</span> that
+                combine <span class="text-accent">NeuroSymbolic reasoning</span>,
+                <span class="text-accent">information retrieval</span>, and
+                <span class="text-accent">source attribution</span>.
+            </p>
 
             <div class="mb-4 d-flex flex-wrap justify-content-center gap-2">
                 <a href="#contact" class="btn btn-accent">Get in touch</a>
-                <!-- Fix 2: point to PDF inside 'assests' folder -->
+                <!-- Point to PDF inside 'assests' folder -->
                 <a href="assests/Yash_Resume.pdf" class="btn btn-outline-accent" download>Download Résumé</a>
             </div>
             <div class="social-icons">
@@ -80,26 +115,25 @@ combine <span class="text-accent">NeuroSymbolic reasoning</span>,
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-right">
                     <!-- Profile photo -->
-                    <!-- Fix 2: use 'assests' folder -->
                     <img src="assests/profile.png" alt="Profile photo" class="profile-photo w-100">
                 </div>
                 <div class="col-md-8" data-aos="fade-left">
                     <h2 class="mb-3">About Me</h2>
                     <p>
-    I'm Yash Saxena, a Ph.D. student in Computer Science at the University of Maryland, Baltimore County.
-    My research sits at the intersection of retrieval-augmented generation, interpretability, and source attribution.
-    I focus on making each stage of a language agent (retrieval, evidence selection, and generation) transparent and verifiable,
-    through interpretable retrievers, rationale-driven evidence selection, and citation schemes that balance coverage with correctness.
-    I care about language models that can show their work and earn trust in domains where mistakes actually matter.
-</p>
-<p>
-    Before my Ph.D., I completed a B.Tech. in Computer Science and Engineering (AI & ML) at Galgotias University.
-    I have worked on projects in mental health classification, game content generation, and legal tech,
-    in roles that combine research and engineering.
-    I enjoy mentoring undergraduate researchers, collaborating with interdisciplinary teams,
-    and turning ideas into practical tools.
-    Outside of research, you will usually find me exploring music, reading about neuroscience, or at a hackathon.
-</p>
+                        I'm Yash Saxena, a Ph.D. student in Computer Science at the University of Maryland, Baltimore County.
+                        My research sits at the intersection of retrieval-augmented generation, interpretability, and source attribution.
+                        I focus on making each stage of a language agent (retrieval, evidence selection, and generation) transparent and verifiable,
+                        through interpretable retrievers, rationale-driven evidence selection, and citation schemes that balance coverage with correctness.
+                        I care about language models that can show their work and earn trust in domains where mistakes actually matter.
+                    </p>
+                    <p>
+                        Before my Ph.D., I completed a B.Tech. in Computer Science and Engineering (AI & ML) at Galgotias University.
+                        I have worked on projects in mental health classification, game content generation, and legal tech,
+                        in roles that combine research and engineering.
+                        I enjoy mentoring undergraduate researchers, collaborating with interdisciplinary teams,
+                        and turning ideas into practical tools.
+                        Outside of research, you will usually find me exploring music, reading about neuroscience, or at a hackathon.
+                    </p>
                 </div>
             </div>
         </div>
@@ -246,7 +280,7 @@ combine <span class="text-accent">NeuroSymbolic reasoning</span>,
                     <div class="timeline-content">
                         <h5 class="mb-1">Bishop Conrad Sr. Sec. School</h5>
                         <p class="small text-muted mb-1">Senior Secondary (XII) (May 2018 - May 2019)</p>
-                        <p class="mb-0">Graduated with 83.20 % in Physics, Chemistry & Mathematics.</p>
+                        <p class="mb-0">Graduated with 83.20 % in Physics, Chemistry &amp; Mathematics.</p>
                     </div>
                 </div>
             </div>
@@ -592,7 +626,7 @@ combine <span class="text-accent">NeuroSymbolic reasoning</span>,
         // Dark mode toggle functionality
         document.addEventListener('DOMContentLoaded', function () {
             const toggle = document.getElementById('darkModeToggle');
-            // helper to set theme and update icon
+
             function setTheme(mode) {
                 if (mode === 'dark') {
                     document.body.classList.add('dark-mode');
@@ -602,16 +636,15 @@ combine <span class="text-accent">NeuroSymbolic reasoning</span>,
                     toggle.innerHTML = '<i class="fas fa-moon"></i>';
                 }
             }
-            // read theme from localStorage
+
             const storedTheme = localStorage.getItem('theme');
             if (storedTheme) {
                 setTheme(storedTheme);
             } else {
-                // use system preference if available
                 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
                 setTheme(prefersDark ? 'dark' : 'light');
             }
-            // attach click handler
+
             toggle.addEventListener('click', function () {
                 const isDark = document.body.classList.contains('dark-mode');
                 const newTheme = isDark ? 'light' : 'dark';
@@ -620,25 +653,24 @@ combine <span class="text-accent">NeuroSymbolic reasoning</span>,
             });
         });
 
-        // Simple typing effect for research topics.  The text cycles through
-        // the major areas of my research (NeuroSymbolic AI, Source Attribution, Trustworthy AI,
-        // Information Retrieval and NLP).  It avoids em/en dashes and uses regular hyphens.
+        // Simple typing effect for research topics
         document.addEventListener('DOMContentLoaded', function () {
             const topics = ['NeuroSymbolic AI', 'Source Attribution', 'Trustworthy AI', 'Information Retrieval', 'NLP'];
             let topicIndex = 0;
             let charIndex = 0;
             const typedEl = document.getElementById('typed-role');
+
             function type() {
                 const current = topics[topicIndex];
                 typedEl.textContent = current.substring(0, charIndex + 1);
                 charIndex++;
                 if (charIndex === current.length) {
-                    // pause before erasing
                     setTimeout(erase, 1800);
                 } else {
                     setTimeout(type, 100);
                 }
             }
+
             function erase() {
                 const current = topics[topicIndex];
                 typedEl.textContent = current.substring(0, charIndex - 1);
@@ -650,7 +682,7 @@ combine <span class="text-accent">NeuroSymbolic reasoning</span>,
                     setTimeout(erase, 50);
                 }
             }
-            // Start typing effect after a brief delay
+
             setTimeout(type, 500);
         });
 
@@ -696,9 +728,7 @@ combine <span class="text-accent">NeuroSymbolic reasoning</span>,
             });
         });
 
-        // Add interactive tilt effect to research focus cards on desktop devices.  The effect
-        // slightly rotates cards based on mouse position to add a sense of depth.  It is
-        // disabled on touch devices to avoid unintended interactions.
+        // Tilt effect for research focus cards on desktop devices
         document.addEventListener('DOMContentLoaded', function () {
             const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
             if (!isTouch) {
@@ -708,7 +738,6 @@ combine <span class="text-accent">NeuroSymbolic reasoning</span>,
                         const rect = card.getBoundingClientRect();
                         const x = e.clientX - rect.left;
                         const y = e.clientY - rect.top;
-                        // Calculate rotation relative to center (max 8 degrees)
                         const rotateX = ((y / rect.height) - 0.5) * 8;
                         const rotateY = ((x / rect.width) - 0.5) * -8;
                         card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
