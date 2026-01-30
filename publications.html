@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publications - Yash Saxena</title>
+    <meta name="description" content="Research publications and presentations by Yash Saxena.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Yash Saxena</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="publications.html">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item d-flex align-items-center ms-lg-2">
+                        <button id="darkModeToggle" class="btn btn-outline-accent btn-sm" type="button" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-5" style="margin-top: 80px;">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">Publications &amp; Presentations</h1>
+            <p class="lead text-secondary">Research papers, talks, and works in progress</p>
+        </div>
+    </section>
+
+    <!-- Presentations Section -->
+    <section id="presentations" class="py-5 bg-alternate">
+        <div class="container">
+            <h2 class="mb-5 text-center">Presentations &amp; Talks</h2>
+            <div class="row g-4">
+                <!-- UMBC AI Symposium Presentation -->
+                <div class="col-md-6">
+                    <div class="presentation-card p-4 shadow-sm rounded h-100">
+                        <h5 class="mb-3">Building Trustworthy LLM Agents for Academia</h5>
+                        <p class="small">Presented at the UMBC AI Symposium, this talk outlines the pillars of trust: interpretability, robustness and credibility. It covers interpretable retrieval (IMRNNs), rationale-driven reranking (METEORA) and citation paradigms like G-Cite and P-Cite. The talk demonstrates improved recall and precision, discusses trade-offs between coverage and correctness, and highlights a robust, transparent pipeline for academic research.</p>
+                        <a href="https://youtu.be/XiwwPS-hNXo?si=ytzEk9EGE7ADuV7C" target="_blank" class="text-decoration-none">Watch Video&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <!-- Bloomberg Law AI Symposium Presentation -->
+                <div class="col-md-6">
+                    <div class="presentation-card p-4 shadow-sm rounded h-100">
+                        <h5 class="mb-3">RASOR: Contextual Legal Intelligence</h5>
+                        <p class="small">At Bloomberg Law's AI Symposium on the future of legal technology, I presented <em>RASOR: Contextual Legal Intelligence via Rationalized Selection and Refinement in RAG</em> alongside collaborators. The symposium convened legal and AI experts to explore how retrieval-augmented systems can provide contextual legal intelligence using rationalized selection and refinement to improve citation quality in legal tasks.</p>
+                        <a href="https://pro.bloomberglaw.com/insights/company-news/bloomberg-law-hosts-ai-symposium-exploring-the-future-of-legal-technology/#:~:text=RASOR%3A%20Contextual%20Legal%20Intelligence%20via%20Rationalized%20Selection%20and%20Refinement%20in%20RAG" target="_blank" class="text-decoration-none">Event Article&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-5">
+        <div class="container">
+            <h2 class="mb-5 text-center">Publications &amp; Preprints</h2>
+            <p class="text-center mb-5" style="color: var(--text-secondary);">A selection of my research papers with summaries and keywords. Click the titles to read more.</p>
+            <div class="row g-4">
+                <!-- IMRNNs Efficient Modulation - MOVED HERE -->
+                <div class="col-md-6">
+                    <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+                        <div class="conference-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>EACL 2026</span>
+                        </div>
+                        <h5 class="mb-3"><a href="https://arxiv.org/abs/2601.20084" target="_blank" class="text-decoration-none">IMRNNs: Efficient Embedding Modulation</a></h5>
+                        <p class="small flex-grow-1"><strong>EACL 2026.</strong> Extends interpretable retrieval by introducing efficient embedding modulation techniques that produce token-level explanations while reducing computational overhead in dense retrieval.</p>
+                        <p class="small mb-3">
+                            <span class="badge me-1">interpretable retrieval</span>
+                            <span class="badge me-1">efficient embedding</span>
+                            <span class="badge">dense retrieval</span>
+                        </p>
+                        <div class="mt-auto text-end">
+                            <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-imrnns">Read more</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Generation-Time vs. Post-hoc Citation -->
+                <div class="col-md-6">
+                    <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+                        <div class="conference-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>NeurIPS 2025</span>
+                        </div>
+                        <h5 class="mb-3"><a href="https://arxiv.org/abs/2509.21557" target="_blank" class="text-decoration-none">Generation-Time vs. Post-hoc Citation</a></h5>
+                        <p class="small flex-grow-1"><strong>NeurIPS LLM Evaluation Workshop 2025.</strong> This paper compares two citation paradigms: Generation-Time Citation (G-Cite) and Post-hoc Citation (P-Cite) across multiple attribution datasets. It shows that retrieval quality drives attribution quality, that P-Cite offers higher coverage with competitive correctness, and recommends a retrieval-centric, P-Cite-first approach for high-stakes domains.</p>
+                        <p class="small mb-3">
+                            <span class="badge me-1">LLM attribution</span>
+                            <span class="badge me-1">citations</span>
+                            <span class="badge">evaluation</span>
+                        </p>
+                        <div class="mt-auto text-end">
+                            <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-gcite">Read more</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Can LLMs Obfuscate Code? -->
+                <div class="col-md-6">
+                    <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+                        <div class="conference-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>AAAI 2025</span>
+                        </div>
+                        <h5 class="mb-3"><a href="https://doi.org/10.1609/aaai.v39i23.34672" target="_blank" class="text-decoration-none">Can LLMs Obfuscate Code?</a></h5>
+                        <p class="small flex-grow-1"><strong>AAAI 2025.</strong> This study asks whether LLMs can generate obfuscated assembly code and presents the MetamorphASM benchmark with a dataset of 328,200 obfuscated samples. By evaluating multiple LLMs across obfuscation techniques such as dead code, register substitution and control-flow change, the authors show that LLMs can produce obfuscated code, posing security risks for anti-virus tools.</p>
+                        <p class="small mb-3">
+                            <span class="badge me-1">code obfuscation</span>
+                            <span class="badge me-1">LLM security</span>
+                            <span class="badge">malware</span>
+                        </p>
+                        <div class="mt-auto text-end">
+                            <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-obfuscation">Read more</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Evaluating Consistency and Reasoning Capabilities -->
+                <div class="col-md-6">
+                    <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+                        <div class="conference-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>ICDSIS 2024</span>
+                        </div>
+                        <h5 class="mb-3"><a href="https://arxiv.org/abs/2404.16478" target="_blank" class="text-decoration-none">Evaluating Consistency &amp; Reasoning of LLMs</a></h5>
+                        <p class="small flex-grow-1"><strong>2nd International Conference on Data Science &amp; Information Systems 2024.</strong> This study evaluates the consistency and reasoning abilities of public and proprietary LLMs using the Boolq dataset. Models are assessed with metrics like BERT, BLEU and F-1 on generated explanations and answers, revealing that proprietary models outperform public ones yet none achieve high scores for both consistency and reasoning.</p>
+                        <p class="small mb-3">
+                            <span class="badge me-1">LLM consistency</span>
+                            <span class="badge me-1">reasoning</span>
+                            <span class="badge">evaluation</span>
+                        </p>
+                        <div class="mt-auto text-end">
+                            <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-consistency">Read more</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <!-- Emotion-Based Mental Health Classifier -->
+                <div class="col-md-6">
+                    <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+                        <div class="conference-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>IEEE IC3I 2023</span>
+                        </div>
+                        <h5 class="mb-3"><a href="https://doi.org/10.1109/IC3I59117.2023.10397910" target="_blank" class="text-decoration-none">Emotion-Based Mental Health Classifier</a></h5>
+                        <p class="small flex-grow-1"><strong>IEEE IC3I 2023.</strong> This work presents a machine learning pipeline to detect and classify the mental state of engineering students using social media text. It combines sentiment analysis with models such as RNN, GRU and SVM to identify emotions and support early detection of mental health issues.</p>
+                        <p class="small mb-3">
+                            <span class="badge me-1">mental health</span>
+                            <span class="badge me-1">sentiment analysis</span>
+                            <span class="badge">emotion classification</span>
+                        </p>
+                        <div class="mt-auto text-end">
+                            <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-mentalhealth">Read more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Under Review & In Preparation -->
+            <h4 class="mt-5 mb-4">Works Under Review &amp; In Preparation</h4>
+            <div class="row g-4">
+                <!-- Ranking Free RAG -->
+                <div class="col-md-6">
+                    <div class="publication-card p-4 shadow-sm rounded h-100">
+                        <div class="conference-badge under-review">
+                            <i class="fas fa-clock"></i>
+                            <span>Under Review</span>
+                        </div>
+                        <h6 class="mb-2">Ranking Free RAG</h6>
+                        <p class="small mb-3">Under review at ICML 2026. Proposes replacing re-ranking with a selection mechanism in retrieval-augmented generation, aiming to improve fairness and transparency in sensitive domains by selecting evidence based on rationales rather than top-k ranking.</p>
+                        <p class="small mb-0">
+                            <span class="badge me-1">RAG</span>
+                            <span class="badge me-1">fairness</span>
+                            <span class="badge">sensitive domains</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Attribution in Scientific Literature -->
+                <div class="col-md-6">
+                    <div class="publication-card p-4 shadow-sm rounded h-100">
+                        <div class="conference-badge in-preparation">
+                            <i class="fas fa-flask"></i>
+                            <span>In Preparation</span>
+                        </div>
+                        <h6 class="mb-2">Attribution in Scientific Literature</h6>
+                        <p class="small mb-3">In preparation. Introduces a benchmark and methods for evaluating source attribution in scientific literature, aiming to improve citation coverage and correctness in generative models.</p>
+                        <p class="small mb-0">
+                            <span class="badge me-1">source attribution</span>
+                            <span class="badge me-1">benchmarking</span>
+                            <span class="badge">citations</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publication Detail Modals -->
+    
+    <!-- IMRNNs Modal -->
+    <div class="modal fade" id="modal-imrnns" tabindex="-1" aria-labelledby="modalImrnnsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalImrnnsLabel">IMRNNs: Efficient Embedding Modulation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This work extends interpretable retrieval by introducing efficient embedding modulation techniques that produce token-level explanations while reducing computational overhead in dense retrieval. By modulating embeddings at different layers, IMRNNs achieve better interpretability without sacrificing retrieval performance, making them suitable for applications requiring both accuracy and transparency.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- G-Cite vs. P-Cite Modal -->
+    <div class="modal fade" id="modal-gcite" tabindex="-1" aria-labelledby="modalGciteLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalGciteLabel">Generation-Time vs. Post-hoc Citation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>In this work, we investigate two paradigms for citing sources in generated text: Generation-Time Citation (G-Cite) and Post-hoc Citation (P-Cite). G-Cite annotates evidence as text is produced, whereas P-Cite retrospectively links generated answers to retrieved documents. Through experiments on multiple attribution datasets we show that citation quality is largely governed by the quality of retrieval. P-Cite yields higher coverage and competitive correctness compared to G-Cite, demonstrating that post-hoc approaches can provide more complete attribution while remaining precise. Our analysis suggests adopting a retrieval-centric, P-Cite-first strategy in high-stakes domains, where transparency and completeness of citations are paramount.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consistency & Reasoning Modal -->
+    <div class="modal fade" id="modal-consistency" tabindex="-1" aria-labelledby="modalConsistencyLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalConsistencyLabel">Evaluating Consistency &amp; Reasoning of LLMs</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This paper benchmarks the consistency and reasoning abilities of large language models using the Boolq dataset. We assess both public and proprietary models across metrics including BERT-score, BLEU and F-1 on generated explanations and answers. Results reveal that proprietary models outperform open-source alternatives; however, no model excels at both consistency and reasoning simultaneously. The findings underscore gaps in current evaluation and highlight the need for models that can both reason and maintain internal consistency across tasks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Obfuscation Modal -->
+    <div class="modal fade" id="modal-obfuscation" tabindex="-1" aria-labelledby="modalObfuscationLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalObfuscationLabel">Can LLMs Obfuscate Code?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Addressing a growing cybersecurity question, this work introduces <em>MetamorphASM</em>, a benchmark of 328,200 obfuscated assembly code snippets, to evaluate whether LLMs can generate obfuscated malware. We test models under various obfuscation techniques, including dead code insertion, register substitution and control-flow manipulation, and find that LLMs are capable of producing obfuscated code that challenges static analysis tools. The study emphasises the dual-use nature of LLMs and calls for developing safeguards to mitigate malicious applications.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mental Health Modal -->
+    <div class="modal fade" id="modal-mentalhealth" tabindex="-1" aria-labelledby="modalMentalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMentalLabel">Emotion-Based Mental Health Classifier</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This paper presents a sentiment-driven machine learning pipeline for identifying the mental state of engineering students from social media posts. By combining sentiment analysis with recurrent neural networks (RNNs), gated recurrent units (GRUs) and support vector machines (SVMs), the system classifies emotions into categories such as anxiety, joy and sadness. The approach seeks to facilitate early detection of mental health concerns and encourage proactive support within academic communities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></div>
+
+    <!-- Footer -->
+    <footer class="py-4 border-top">
+        <div class="container text-center">
+            <small>&copy; <span id="year"></span> Yash Saxena. All rights reserved.</small>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
