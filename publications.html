@@ -113,6 +113,36 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Neurosymbolic Retrievers for RAG -->
+                <div class="col-md-6">
+                  <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+                    <div class="conference-badge">
+                      <i class="fas fa-certificate"></i>
+                      <span>IEEE Intelligent Systems</span>
+                    </div>
+                    <h5 class="mb-3">
+                      <a href="https://ieeexplore.ieee.org/document/11373694" target="_blank" class="text-decoration-none">
+                        Neurosymbolic Retrievers for Retrieval-augmented Generation
+                      </a>
+                    </h5>
+                    <p class="small flex-grow-1">
+                      <strong>IEEE Intelligent Systems.</strong>
+                      Introduces a neurosymbolic retrieval framework that combines knowledge graphs with neural retrieval to make document selection more transparent. Proposes MAR (knowledge-modulated retrieval), KG-Path RAG (graph traversal based query enrichment), and process knowledge-infused reranking, with early gains in mental health risk assessment tasks.
+                    </p>
+                    <p class="small mb-3">
+                      <span class="badge me-1">neurosymbolic RAG</span>
+                      <span class="badge me-1">knowledge graphs</span>
+                      <span class="badge">interpretable retrieval</span>
+                    </p>
+                    <div class="mt-auto text-end">
+                      <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-neurosymbolic">
+                        Read more
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
                 
                 <!-- Generation-Time vs. Post-hoc Citation -->
                 <div class="col-md-6">
@@ -253,7 +283,30 @@
             </div>
         </div>
     </div>
-    
+
+
+    <!-- Neurosymbolic Retrievers Modal -->
+    <div class="modal fade" id="modal-neurosymbolic" tabindex="-1" aria-labelledby="modalNeurosymbolicLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalNeurosymbolicLabel">Neurosymbolic Retrievers for Retrieval-augmented Generation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              This work proposes a neurosymbolic retrieval approach for RAG that integrates symbolic structure from knowledge graphs with neural retrieval, aiming to make evidence selection more explicit and auditable in high-stakes settings. It introduces three complementary mechanisms: MAR (Knowledge Modulation Aligned Retrieval) to refine query representations using interpretable symbolic features, KG-Path RAG to enrich queries via graph traversals, and process knowledge-infused RAG to reorder retrieved content using validated procedural workflows. Early results on mental health risk assessment tasks suggest improvements in both transparency and overall retrieval quality.
+            </p>
+            <p class="mb-0">
+              <a href="https://ieeexplore.ieee.org/document/11373694" target="_blank" class="text-decoration-none">
+                View on IEEE Xplore&nbsp;<i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- G-Cite vs. P-Cite Modal -->
     <div class="modal fade" id="modal-gcite" tabindex="-1" aria-labelledby="modalGciteLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
