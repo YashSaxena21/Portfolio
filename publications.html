@@ -92,8 +92,29 @@
     <section id="publications" class="py-5">
         <div class="container">
             <h2 class="mb-5 text-center">Publications &amp; Preprints</h2>
-            <p class="text-center mb-5" style="color: var(--text-secondary);">A selection of my research papers with concise summaries and keywords. Click the titles to read more.</p>
+            <p class="text-center mb-5" style="color: var(--text-secondary);">A selection of my research papers with concise summaries and keywords. Use Read more for details; linked titles open public versions when available.</p>
             <div class="row g-4">
+                <!-- Ranking Free RAG -->
+                <div class="col-md-6">
+                    <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+                        <div class="conference-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>ICML 2026</span>
+                        </div>
+                        <h5 class="mb-3">Ranking Free RAG: Replacing Re-ranking with Selection in RAG for Sensitive Domains</h5>
+                        <p class="small text-secondary mb-2"><strong>Authors:</strong> Yash Saxena and collaborators</p>
+                        <p class="small flex-grow-1"><strong>ICML 2026.</strong> This paper introduces METEORA, a rationale-driven evidence selection framework for retrieval-augmented generation. Instead of relying on fixed top-k retrieval followed by opaque re-ranking, METEORA uses generated rationales to select evidence adaptively, improving interpretability, robustness, and evidence quality in sensitive domains such as law, finance, and healthcare.</p>
+                        <p class="small mb-3">
+                            <span class="badge me-1">RAG</span>
+                            <span class="badge me-1">evidence selection</span>
+                            <span class="badge">sensitive domains</span>
+                        </p>
+                        <div class="mt-auto text-end">
+                            <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-ranking-free-rag">Read more</button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- IMRNNs -->
                 <div class="col-md-6">
                     <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
@@ -251,26 +272,9 @@
                 </div>
             </div>
             
-            <!-- Under Review & In Preparation -->
-            <h4 class="mt-5 mb-4">Works Under Review &amp; In Preparation</h4>
+            <!-- In Preparation -->
+            <h4 class="mt-5 mb-4">Works in Preparation</h4>
             <div class="row g-4">
-                <!-- Ranking Free RAG -->
-                <div class="col-md-6">
-                    <div class="publication-card p-4 shadow-sm rounded h-100">
-                        <div class="conference-badge under-review">
-                            <i class="fas fa-clock"></i>
-                            <span>Under Review</span>
-                        </div>
-                        <h6 class="mb-2">Ranking Free RAG: Replacing Re-ranking with Selection in RAG for Sensitive Domains</h6>
-                        <p class="small mb-3">This work proposes METEORA, a rationale-driven evidence selection framework for RAG. Instead of treating top-k retrieval and re-ranking as fixed pipeline steps, it uses generated rationales to select evidence adaptively, aiming to improve interpretability, robustness, and evidence quality in sensitive domains such as law, finance, and healthcare.</p>
-                        <p class="small mb-0">
-                            <span class="badge me-1">RAG</span>
-                            <span class="badge me-1">evidence selection</span>
-                            <span class="badge">sensitive domains</span>
-                        </p>
-                    </div>
-                </div>
-                
                 <!-- Attribution in Scientific Literature -->
                 <div class="col-md-6">
                     <div class="publication-card p-4 shadow-sm rounded h-100">
@@ -292,6 +296,22 @@
     </section>
 
     <!-- Publication Detail Modals -->
+
+    <!-- Ranking Free RAG Modal -->
+    <div class="modal fade" id="modal-ranking-free-rag" tabindex="-1" aria-labelledby="modalRankingFreeRagLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRankingFreeRagLabel">Ranking Free RAG: Replacing Re-ranking with Selection in RAG for Sensitive Domains</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>METEORA reframes the retrieval stage of RAG as an evidence selection problem rather than a fixed top-k ranking problem. The method uses rationale-guided selection to identify evidence that is actually useful for answering the query, reducing dependence on opaque re-rankers and arbitrary context cutoffs.</p>
+                    <p>The paper targets sensitive domains where retrieval mistakes can directly affect downstream correctness and trust. By exposing selection rationales and using verification signals, the framework makes evidence selection more transparent, robust, and better aligned with the final answer generation task.</p>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- IMRNNs Modal -->
     <div class="modal fade" id="modal-imrnns" tabindex="-1" aria-labelledby="modalImrnnsLabel" aria-hidden="true">
