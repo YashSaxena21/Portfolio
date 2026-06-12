@@ -10,7 +10,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;family=DM+Sans:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -19,17 +19,6 @@
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/style.css" />
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNBDDZ4B31"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XNBDDZ4B31');
-</script>
-    
 <body>
     <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
@@ -94,24 +83,49 @@
             <h2 class="mb-5 text-center">Publications &amp; Preprints</h2>
             <p class="text-center mb-5" style="color: var(--text-secondary);">A selection of my research papers with concise summaries and keywords. Use Read more for details; linked titles open public versions when available.</p>
             <div class="row g-4">
-                <!-- Ranking Free RAG -->
+                <!-- IJCAI-ECAI Doctoral Consortium -->
+                <div class="col-md-6">
+                    <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+                        <div class="conference-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>IJCAI-ECAI DC 2026</span>
+                        </div>
+                        <h5 class="mb-3">IKnowFlow: Trustworthy AI Systems for Sensitive Domains</h5>
+                        <p class="small text-secondary mb-2"><strong>Authors:</strong> Yash Saxena</p>
+                        <p class="small mb-2"><strong>IJCAI-ECAI 2026 Doctoral Consortium, Bremen, Germany. Travel grant awarded.</strong></p>
+                        <p class="small flex-grow-1">This doctoral consortium submission presents IKnowFlow, a framework for operationalizing trustworthiness in AI systems through traceability, interpretability, and grounding. The work connects REASONS, IMRNNs, and METEORA into a unified thesis direction and outlines future work on negation-aware retrieval and provenance-aware verification through structured source graphs.</p>
+                        <p class="small mb-3">
+                            <span class="badge me-1">AI systems</span>
+                            <span class="badge me-1">trustworthy AI</span>
+                            <span class="badge me-1">interpretability</span>
+                            <span class="badge me-1">attribution</span>
+                            <span class="badge">doctoral consortium</span>
+                        </p>
+                        <div class="mt-auto text-end">
+                            <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-iknowflow">Read more</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- METEORA -->
                 <div class="col-md-6">
                     <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
                         <div class="conference-badge">
                             <i class="fas fa-certificate"></i>
                             <span>ICML 2026</span>
                         </div>
-                        <h5 class="mb-3">Ranking Free RAG: Replacing Re-ranking with Selection in RAG for Sensitive Domains</h5>
+                        <h5 class="mb-3">METEORA: Ranking Free RAG: Replacing Re-ranking with Selection in RAG for Sensitive Domains</h5>
                         <p class="small text-secondary mb-2"><strong>Authors:</strong> Yash Saxena, Ankur Padia, Mandar Chaudhary, Kalpa Gunaratna, Srinivasan Parthasarathy, and Manas Gaur</p>
-                        <p class="small flex-grow-1"><strong>ICML 2026.</strong> This paper introduces METEORA, a rationale-driven evidence selection framework for retrieval-augmented generation. Instead of relying on fixed top-k retrieval followed by opaque re-ranking, METEORA uses generated rationales to select evidence adaptively, improving interpretability, robustness, and evidence quality in sensitive domains such as law, finance, and healthcare.</p>
+                        <p class="small flex-grow-1"><strong>ICML 2026.</strong> METEORA reframes RAG retrieval as rationale-driven evidence selection instead of fixed top-k retrieval followed by opaque re-ranking. It improves answer accuracy by +33.34% while using 50% fewer evidence chunks, and raises adversarial defense F1 from 0.10 to 0.44 across sensitive-domain datasets.</p>
                         <p class="small mb-3">
                             <span class="badge me-1">RAG</span>
                             <span class="badge me-1">evidence selection</span>
+                            <span class="badge me-1">grounding</span>
                             <span class="badge">sensitive domains</span>
                         </p>
                         <div class="mt-auto d-flex justify-content-end gap-2 flex-wrap">
                             <a href="https://yashsaxena21.github.io/METEORA-web/" target="_blank" class="btn btn-sm btn-outline-accent">Project Website&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a>
-                            <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-ranking-free-rag">Read more</button>
+                            <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-meteora">Read more</button>
                         </div>
                     </div>
                 </div>
@@ -125,7 +139,7 @@
                         </div>
                         <h5 class="mb-3"><a href="https://aclanthology.org/2026.findings-eacl.333/" target="_blank" class="text-decoration-none">IMRNNs: An Efficient Method for Interpretable Dense Retrieval via Embedding Modulation</a></h5>
                         <p class="small text-secondary mb-2"><strong>Authors:</strong> Yash Saxena, Ankur Padia, Kalpa Gunaratna, and Manas Gaur</p>
-                        <p class="small flex-grow-1"><strong>Findings of EACL 2026.</strong> This paper introduces Interpretable Modular Retrieval Neural Networks, a lightweight adapter-based framework that dynamically modulates query and document embeddings while keeping the base retriever frozen. The goal is to improve dense retrieval while making retrieval behavior easier to inspect through semantic directions that explain what the model emphasizes or suppresses for a query.</p>
+                        <p class="small flex-grow-1"><strong>Findings of EACL 2026.</strong> IMRNNs adds lightweight learned adapters to a frozen dense retriever, dynamically modulating query and document embeddings while preserving efficient retrieval. The method improves recall by +7.14% across 7 benchmarks and exposes human-readable query-document matching signals.</p>
                         <p class="small mb-3">
                             <span class="badge me-1">interpretable retrieval</span>
                             <span class="badge me-1">embedding modulation</span>
@@ -140,32 +154,23 @@
 
                 <!-- Neurosymbolic Retrievers for RAG -->
                 <div class="col-md-6">
-                  <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
-                    <div class="conference-badge">
-                      <i class="fas fa-certificate"></i>
-                      <span>IEEE Intelligent Systems</span>
+                    <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+                        <div class="conference-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>IEEE Intelligent Systems</span>
+                        </div>
+                        <h5 class="mb-3"><a href="https://ieeexplore.ieee.org/document/11373694" target="_blank" class="text-decoration-none">Neurosymbolic Retrievers for Retrieval-Augmented Generation</a></h5>
+                        <p class="small text-secondary mb-2"><strong>Authors:</strong> Yash Saxena and Manas Gaur</p>
+                        <p class="small flex-grow-1"><strong>IEEE Intelligent Systems.</strong> This perspective article argues that retrievers should not remain opaque components inside RAG pipelines. It outlines neurosymbolic retrieval mechanisms that combine neural ranking with symbolic structures such as knowledge graphs, process knowledge, and path-based query enrichment.</p>
+                        <p class="small mb-3">
+                            <span class="badge me-1">neurosymbolic RAG</span>
+                            <span class="badge me-1">knowledge graphs</span>
+                            <span class="badge">interpretable retrieval</span>
+                        </p>
+                        <div class="mt-auto text-end">
+                            <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-neurosymbolic">Read more</button>
+                        </div>
                     </div>
-                    <h5 class="mb-3">
-                      <a href="https://ieeexplore.ieee.org/document/11373694" target="_blank" class="text-decoration-none">
-                        Neurosymbolic Retrievers for Retrieval-augmented Generation
-                      </a>
-                    </h5>
-                    <p class="small text-secondary mb-2"><strong>Authors:</strong> Yash Saxena and Manas Gaur</p>
-                    <p class="small flex-grow-1">
-                      <strong>IEEE Intelligent Systems.</strong>
-                      This perspective article argues that retrievers should not remain opaque components inside RAG pipelines. It outlines neurosymbolic retrieval mechanisms that combine neural ranking with symbolic structures such as knowledge graphs, process knowledge, and path-based query enrichment to make document selection more interpretable and auditable.
-                    </p>
-                    <p class="small mb-3">
-                      <span class="badge me-1">neurosymbolic RAG</span>
-                      <span class="badge me-1">knowledge graphs</span>
-                      <span class="badge">interpretable retrieval</span>
-                    </p>
-                    <div class="mt-auto text-end">
-                      <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-neurosymbolic">
-                        Read more
-                      </button>
-                    </div>
-                  </div>
                 </div>
 
                 <!-- Legal AI-TRISM Book Chapter -->
@@ -177,7 +182,7 @@
                         </div>
                         <h5 class="mb-3"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/9781394302406.ch14" target="_blank" class="text-decoration-none">Neurosymbolic AI for Legal AI-TRISM: Trustworthy, Reliable, Interpretable, Safe Models</a></h5>
                         <p class="small text-secondary mb-2"><strong>Authors:</strong> Deepa Tilwani, Yash Saxena, Ankur Padia, Srinivasan Parthasarathy, and Manas Gaur</p>
-                        <p class="small flex-grow-1"><strong>In <em>Neurosymbolic AI: Foundations and Applications</em>, Wiley, 2026.</strong> This chapter studies how neurosymbolic AI can strengthen Legal AI-TRISM by combining LLMs with knowledge graphs, legal rules, and structured reasoning. It focuses on trustworthy legal AI systems that need reliability, interpretability, safety, and grounded retrieval when operating over legal documents and domain-specific constraints.</p>
+                        <p class="small flex-grow-1"><strong>In <em>Neurosymbolic AI: Foundations and Applications</em>, Wiley, 2026.</strong> This chapter studies how neurosymbolic AI can strengthen Legal AI-TRISM by combining LLMs with knowledge graphs, legal rules, and structured reasoning for trustworthy legal AI systems.</p>
                         <p class="small mb-3">
                             <span class="badge me-1">legal AI</span>
                             <span class="badge me-1">AI-TRISM</span>
@@ -194,11 +199,11 @@
                     <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
                         <div class="conference-badge">
                             <i class="fas fa-certificate"></i>
-                            <span>NeurIPS Workshop 2025</span>
+                            <span>NeurIPS 2025</span>
                         </div>
-                        <h5 class="mb-3"><a href="https://arxiv.org/abs/2509.21557" target="_blank" class="text-decoration-none">Generation-Time vs. Post-hoc Citation: A Holistic Evaluation of LLM Attribution</a></h5>
+                        <h5 class="mb-3"><a href="https://arxiv.org/abs/2509.21557" target="_blank" class="text-decoration-none">Generation-Time vs. Post-hoc Citation</a></h5>
                         <p class="small text-secondary mb-2"><strong>Authors:</strong> Yash Saxena, Raviteja Bommireddy, Ankur Padia, and Manas Gaur</p>
-                        <p class="small flex-grow-1"><strong>NeurIPS LLM Evaluation Workshop 2025.</strong> This work evaluates how LLMs cite evidence under two attribution paradigms: generating citations while producing an answer and attaching citations after an answer is drafted. The study shows that attribution quality is strongly shaped by retrieval quality, and it analyzes the tradeoff between citation coverage, correctness, and faithfulness.</p>
+                        <p class="small flex-grow-1"><strong>NeurIPS LLM Evaluation Workshop 2025.</strong> This work evaluates two attribution paradigms: generating citations while producing an answer and attaching citations after an answer is drafted. It shows that retrieval quality strongly shapes citation quality, with post-hoc citation reaching 78% human-evaluated correctness compared to 69% for generation-time citation.</p>
                         <p class="small mb-3">
                             <span class="badge me-1">LLM attribution</span>
                             <span class="badge me-1">citations</span>
@@ -217,13 +222,13 @@
                             <i class="fas fa-certificate"></i>
                             <span>AAAI 2025</span>
                         </div>
-                        <h5 class="mb-3"><a href="https://doi.org/10.1609/aaai.v39i23.34672" target="_blank" class="text-decoration-none">Can LLMs Obfuscate Code? A Systematic Analysis of Large Language Models into Assembly Code Obfuscation</a></h5>
-                        <p class="small text-secondary mb-2"><strong>Authors:</strong> Seyedreza Mohseni, Seyedali Mohammadi, Deepa Tilwani, Yash Saxena, and collaborators</p>
-                        <p class="small flex-grow-1"><strong>AAAI 2025.</strong> This paper investigates whether LLMs can generate obfuscated assembly code and introduces MetamorphASM, a benchmark for studying LLM-driven code obfuscation. The results highlight an important security concern: models can produce transformations that make malicious code harder to detect by traditional static analysis tools.</p>
+                        <h5 class="mb-3"><a href="https://doi.org/10.1609/aaai.v39i23.34672" target="_blank" class="text-decoration-none">Can LLMs Obfuscate Code?</a></h5>
+                        <p class="small text-secondary mb-2"><strong>Authors:</strong> Seyedreza Mohseni, Seyedali Mohammadi, Deepa Tilwani, Yash Saxena, Gerald Ketu Ndawula, Sriram Vema, Edward Raff, and Manas Gaur</p>
+                        <p class="small flex-grow-1"><strong>AAAI 2025.</strong> This paper investigates whether LLMs can generate obfuscated assembly code and introduces MetamorphASM, a benchmark of 328,200 obfuscated samples. The results highlight a security concern: LLM-generated transformations can make malicious code harder to detect with traditional static analysis tools.</p>
                         <p class="small mb-3">
                             <span class="badge me-1">code obfuscation</span>
                             <span class="badge me-1">LLM security</span>
-                            <span class="badge">malware analysis</span>
+                            <span class="badge">malware</span>
                         </p>
                         <div class="mt-auto text-end">
                             <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-obfuscation">Read more</button>
@@ -238,9 +243,9 @@
                             <i class="fas fa-certificate"></i>
                             <span>ICDSIS 2024</span>
                         </div>
-                        <h5 class="mb-3"><a href="https://arxiv.org/abs/2404.16478" target="_blank" class="text-decoration-none">Evaluating Consistency and Reasoning Capabilities of Large Language Models</a></h5>
+                        <h5 class="mb-3"><a href="https://arxiv.org/abs/2404.16478" target="_blank" class="text-decoration-none">Evaluating Consistency &amp; Reasoning of LLMs</a></h5>
                         <p class="small text-secondary mb-2"><strong>Authors:</strong> Yash Saxena, Sarthak Chopra, and Arunendra Mani Tripathi</p>
-                        <p class="small flex-grow-1"><strong>2nd International Conference on Data Science and Information Systems 2024.</strong> This study evaluates whether large language models provide both correct answers and consistent explanations. Using question answering benchmarks and explanation-oriented metrics, it shows that higher answer accuracy does not automatically imply stable reasoning behavior.</p>
+                        <p class="small flex-grow-1"><strong>2nd International Conference on Data Science &amp; Information Systems 2024.</strong> This study evaluates whether large language models provide both correct answers and consistent explanations. It shows that stronger answer accuracy does not automatically imply stable reasoning behavior.</p>
                         <p class="small mb-3">
                             <span class="badge me-1">LLM consistency</span>
                             <span class="badge me-1">reasoning</span>
@@ -252,6 +257,8 @@
                     </div>
                 </div>
                 
+                
+                
                 <!-- Emotion-Based Mental Health Classifier -->
                 <div class="col-md-6">
                     <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
@@ -259,9 +266,9 @@
                             <i class="fas fa-certificate"></i>
                             <span>IEEE IC3I 2023</span>
                         </div>
-                        <h5 class="mb-3"><a href="https://doi.org/10.1109/IC3I59117.2023.10397910" target="_blank" class="text-decoration-none">Emotion-Based Mental Health Classifier for Engineering Students</a></h5>
+                        <h5 class="mb-3"><a href="https://doi.org/10.1109/IC3I59117.2023.10397910" target="_blank" class="text-decoration-none">Emotion-Based Mental Health Classifier</a></h5>
                         <p class="small text-secondary mb-2"><strong>Authors:</strong> Yash Saxena, Aman Kumar, Daksh Arora, and Runumi Devi</p>
-                        <p class="small flex-grow-1"><strong>IEEE IC3I 2023.</strong> This work presents a machine learning pipeline for identifying student mental health signals from social media text. It combines sentiment analysis with models such as RNNs, GRUs, and SVMs to classify emotion patterns and support earlier identification of mental health concerns in academic communities.</p>
+                        <p class="small flex-grow-1"><strong>IEEE IC3I 2023.</strong> This work presents a machine learning pipeline for identifying student mental health signals from social media text. It combines sentiment analysis with RNN, GRU, and SVM models to classify emotion patterns and support earlier identification of mental health concerns.</p>
                         <p class="small mb-3">
                             <span class="badge me-1">mental health</span>
                             <span class="badge me-1">sentiment analysis</span>
@@ -274,7 +281,7 @@
                 </div>
             </div>
             
-            <!-- In Preparation -->
+            <!-- Works in Preparation -->
             <h4 class="mt-5 mb-4">Works in Preparation</h4>
             <div class="row g-4">
                 <!-- Attribution in Scientific Literature -->
@@ -284,12 +291,13 @@
                             <i class="fas fa-flask"></i>
                             <span>In Preparation</span>
                         </div>
-                        <h6 class="mb-2">Attribution in Scientific Literature: New Benchmark and Methods</h6>
-                        <p class="small mb-3">This work studies attribution in scientific literature, where generated claims must be connected to precise, human-verifiable sources. It focuses on benchmark design and evaluation methods for measuring whether language models cite the right evidence, cover the necessary sources, and avoid unsupported scholarly claims.</p>
+                        <h6 class="mb-2">REASONS: Attribution in Scientific Literature</h6>
+                        <p class="small mb-3">REASONS is a benchmark for evaluating source attribution in generated scientific text across 20,000 scientific papers and 12 domains. It measures whether model-generated claims can be traced to the right scholarly evidence and where attribution failures persist under retrieval augmentation.</p>
+                        <p class="small mb-3"><strong>Media Coverage:</strong> Findings from this benchmark, including the comparison of DeepSeek R1 and OpenAI o1 on attribution tasks, were published in <a href="https://theconversation.com/popular-ais-head-to-head-openai-beats-deepseek-on-sentence-level-reasoning-249109" target="_blank" rel="noopener" class="text-decoration-none">The Conversation&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a> and syndicated in UMBC News, TechXplore, and Route Fifty. The reported hallucination rate was about 85% for DeepSeek R1 compared to about 35% for OpenAI o1.</p>
                         <p class="small mb-0">
                             <span class="badge me-1">source attribution</span>
-                            <span class="badge me-1">scientific literature</span>
-                            <span class="badge">citation evaluation</span>
+                            <span class="badge me-1">benchmarking</span>
+                            <span class="badge">citations</span>
                         </p>
                     </div>
                 </div>
@@ -298,18 +306,36 @@
     </section>
 
     <!-- Publication Detail Modals -->
-
-    <!-- Ranking Free RAG Modal -->
-    <div class="modal fade" id="modal-ranking-free-rag" tabindex="-1" aria-labelledby="modalRankingFreeRagLabel" aria-hidden="true">
+    
+    <!-- IKnowFlow Modal -->
+    <div class="modal fade" id="modal-iknowflow" tabindex="-1" aria-labelledby="modalIknowflowLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalRankingFreeRagLabel">Ranking Free RAG: Replacing Re-ranking with Selection in RAG for Sensitive Domains</h5>
+                    <h5 class="modal-title" id="modalIknowflowLabel">IKnowFlow: Trustworthy AI Systems for Sensitive Domains</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>IKnowFlow is the doctoral thesis framework connecting my work on attribution, interpretable retrieval, and evidence grounding. The framework treats trustworthiness as a pipeline property: retrieval should be explainable, evidence selection should be justified, and generated claims should remain traceable to source material.</p>
+                    <p>The consortium submission positions REASONS, IMRNNs, and METEORA as complementary pieces of that pipeline, then outlines future work on negation-aware retrieval and provenance-aware verification through structured source graphs.</p>
+                    <p class="mb-0"><strong>Venue:</strong> IJCAI-ECAI 2026 Doctoral Consortium, Bremen, Germany. Travel grant awarded.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- METEORA Modal -->
+    <div class="modal fade" id="modal-meteora" tabindex="-1" aria-labelledby="modalMeteoraLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMeteoraLabel">METEORA: Ranking Free RAG</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <p>METEORA reframes the retrieval stage of RAG as an evidence selection problem rather than a fixed top-k ranking problem. The method uses rationale-guided selection to identify evidence that is actually useful for answering the query, reducing dependence on opaque re-rankers and arbitrary context cutoffs.</p>
-                    <p>The paper targets sensitive domains where retrieval mistakes can directly affect downstream correctness and trust. By exposing selection rationales and using verification signals, the framework makes evidence selection more transparent, robust, and better aligned with the final answer generation task.</p>
+                    <p>Across scientific, legal, and finance datasets, METEORA improves answer accuracy by +33.34% while using 50% fewer evidence chunks, and raises adversarial defense F1 from 0.10 to 0.44.</p>
+                    <p class="mb-0"><a href="https://yashsaxena21.github.io/METEORA-web/" target="_blank" class="text-decoration-none">Visit project website&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a></p>
                 </div>
             </div>
         </div>
@@ -320,12 +346,12 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalImrnnsLabel">IMRNNs: An Efficient Method for Interpretable Dense Retrieval via Embedding Modulation</h5>
+                    <h5 class="modal-title" id="modalImrnnsLabel">IMRNNs: Efficient Embedding Modulation</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>IMRNNs addresses a central limitation of dense retrieval: retrieved documents are scored through opaque embedding similarity, making it difficult to understand why a document matched a query. The method adds lightweight query and document adapters over a frozen dense retriever, allowing representations to be modulated dynamically at inference time. This makes retrieval more adaptive while preserving the efficiency benefits of precomputed document embeddings.</p>
-                    <p>The interpretability contribution comes from analyzing how embeddings move after modulation and projecting those changes back into semantic directions associated with the base encoder. This gives users a way to inspect which concepts were emphasized or suppressed during retrieval, making dense retrieval easier to debug and analyze.</p>
+                    <p>IMRNNs addresses a central limitation of dense retrieval: retrieved documents are scored through opaque embedding similarity, making it difficult to understand why a document matched a query. The method adds lightweight query and document adapters over a frozen dense retriever, allowing representations to be modulated dynamically at inference time.</p>
+                    <p>The interpretability contribution comes from analyzing how embeddings move after modulation and projecting those changes back into semantic directions associated with the base encoder. This gives users a way to inspect which concepts were emphasized or suppressed during retrieval.</p>
                     <p class="mb-0"><a href="https://aclanthology.org/2026.findings-eacl.333/" target="_blank" class="text-decoration-none">View on ACL Anthology&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a></p>
                 </div>
             </div>
@@ -334,19 +360,19 @@
 
     <!-- Neurosymbolic Retrievers Modal -->
     <div class="modal fade" id="modal-neurosymbolic" tabindex="-1" aria-labelledby="modalNeurosymbolicLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalNeurosymbolicLabel">Neurosymbolic Retrievers for Retrieval-augmented Generation</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p>This article frames retrieval as a key trust bottleneck in RAG. If the retriever selects weak or misleading evidence, the generator inherits that limitation. The paper argues for neurosymbolic retrieval methods that combine the flexibility of neural retrievers with explicit symbolic structures that humans can inspect, validate, and use for debugging.</p>
-            <p>It discusses mechanisms such as knowledge-modulated retrieval, knowledge-graph path enrichment, and process-knowledge-guided ranking. Together, these approaches show how retrieval can move beyond black-box similarity scoring toward evidence selection that exposes the reasoning context behind a retrieved document.</p>
-            <p class="mb-0"><a href="https://ieeexplore.ieee.org/document/11373694" target="_blank" class="text-decoration-none">View on IEEE Xplore&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a></p>
-          </div>
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalNeurosymbolicLabel">Neurosymbolic Retrievers for Retrieval-Augmented Generation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This article frames retrieval as a key trust bottleneck in RAG. If the retriever selects weak or misleading evidence, the generator inherits that limitation. The paper argues for neurosymbolic retrieval methods that combine the flexibility of neural retrievers with explicit symbolic structures that humans can inspect, validate, and use for debugging.</p>
+                    <p>It discusses mechanisms such as knowledge-modulated retrieval, knowledge-graph path enrichment, and process-knowledge-guided ranking. Together, these approaches show how retrieval can move beyond black-box similarity scoring toward evidence selection that exposes the reasoning context behind a retrieved document.</p>
+                    <p class="mb-0"><a href="https://ieeexplore.ieee.org/document/11373694" target="_blank" class="text-decoration-none">View on IEEE Xplore&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Legal AI-TRISM Modal -->
@@ -365,7 +391,7 @@
             </div>
         </div>
     </div>
-
+    
     <!-- G-Cite vs. P-Cite Modal -->
     <div class="modal fade" id="modal-gcite" tabindex="-1" aria-labelledby="modalGciteLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -375,7 +401,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>This paper studies how LLMs should attach citations to generated answers. Generation-Time Citation asks the model to cite evidence while generating text, while Post-hoc Citation first generates the answer and then links claims back to retrieved evidence. The work evaluates both paradigms across attribution settings and shows that citation behavior depends strongly on the quality of retrieved evidence.</p>
+                    <p>This paper studies how LLMs should attach citations to generated answers. Generation-Time Citation asks the model to cite evidence while generating text, while Post-hoc Citation first generates the answer and then links claims back to retrieved evidence.</p>
                     <p>The key takeaway is that attribution should be treated as a retrieval-sensitive problem rather than only a generation-formatting problem. In high-stakes settings, stronger retrieval and careful post-hoc verification can improve coverage while preserving citation correctness.</p>
                     <p class="mb-0"><a href="https://arxiv.org/abs/2509.21557" target="_blank" class="text-decoration-none">View preprint&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a></p>
                 </div>
@@ -383,12 +409,12 @@
         </div>
     </div>
 
-    <!-- Consistency & Reasoning Modal -->
+    <!-- Consistency and Reasoning Modal -->
     <div class="modal fade" id="modal-consistency" tabindex="-1" aria-labelledby="modalConsistencyLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalConsistencyLabel">Evaluating Consistency and Reasoning of LLMs</h5>
+                    <h5 class="modal-title" id="modalConsistencyLabel">Evaluating Consistency &amp; Reasoning of LLMs</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">

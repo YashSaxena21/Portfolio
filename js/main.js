@@ -47,35 +47,20 @@ document.addEventListener('DOMContentLoaded', function () {
     
     if (!typedEl) return;
     
-    const topics = ['NeuroSymbolic AI', 'Source Attribution', 'Trustworthy AI', 'Information Retrieval', 'NLP'];
+    const topics = [
+        'Trustworthy AI Systems',
+        'Interpretable Retrieval',
+        'Source Attribution',
+        'Neurosymbolic Grounding',
+        'Provenance Verification'
+    ];
     let topicIndex = 0;
-    let charIndex = 0;
-    const typingSpeed = 100;
-    const erasingSpeed = 50;
-    const delayBetweenTopics = 1800;
-    
-    function type() {
-        if (charIndex < topics[topicIndex].length) {
-            typedEl.textContent += topics[topicIndex].charAt(charIndex);
-            charIndex++;
-            setTimeout(type, typingSpeed);
-        } else {
-            setTimeout(erase, delayBetweenTopics);
-        }
-    }
-    
-    function erase() {
-        if (charIndex > 0) {
-            typedEl.textContent = topics[topicIndex].substring(0, charIndex - 1);
-            charIndex--;
-            setTimeout(erase, erasingSpeed);
-        } else {
-            topicIndex = (topicIndex + 1) % topics.length;
-            setTimeout(type, 600);
-        }
-    }
-    
-    setTimeout(type, 500);
+    typedEl.textContent = topics[topicIndex];
+
+    setInterval(() => {
+        topicIndex = (topicIndex + 1) % topics.length;
+        typedEl.textContent = topics[topicIndex];
+    }, 2400);
 });
 
 // Counter animation using IntersectionObserver

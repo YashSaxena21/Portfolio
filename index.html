@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yash Saxena - Research Portfolio</title>
     <meta name="description" content="Yash Saxena - Ph.D. student in Computer Science at UMBC specializing in trustworthy language agents, NeuroSymbolic AI, and source attribution.">
 
     <!-- Google Fonts - Distinctive Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;family=DM+Sans:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Custom styles -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?v=home-works-20260612">
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNBDDZ4B31"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XNBDDZ4B31');
-</script>
-    
 <body>
     <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
@@ -63,9 +52,9 @@
             <!-- Dynamic text cycles through research focus areas -->
             <p class="h4 mb-4"><span id="typed-role"></span></p>
             <p class="lead mb-4">
-                My research focuses on designing <span class="text-accent">trustworthy language agents</span> that
-                combine <span class="text-accent">NeuroSymbolic reasoning</span>,
-                <span class="text-accent">information retrieval</span>, and
+                I build <span class="text-accent">trustworthy AI systems</span> for sensitive domains by connecting
+                <span class="text-accent">interpretable retrieval</span>,
+                <span class="text-accent">evidence grounding</span>, and
                 <span class="text-accent">source attribution</span>.
             </p>
 
@@ -76,7 +65,7 @@
             <div class="social-icons">
                 <a href="https://github.com/YashSaxena21" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github fa-2x"></i></a>
                 <a href="https://www.linkedin.com/in/yash-saxena-a18b251bb" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="https://scholar.google.com/citations?user=5c80BFkAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap fa-2x"></i></a>
+                <a href="https://scholar.google.com/citations?hl=en&amp;user=5c80BFkAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap fa-2x"></i></a>
             </div>
         </div>
     </section>
@@ -84,7 +73,7 @@
     <!-- About Section -->
     <section id="about" class="py-5 bg-alternate">
         <div class="container">
-            <div class="row align-items-center justify-content-center g-5">
+            <div class="row align-items-center justify-content-center gy-5">
                 <div class="col-md-4 mb-4 mb-md-0">
                     <!-- Profile photo -->
                     <img src="images/profile.png" alt="Yash Saxena" class="profile-photo w-100">
@@ -92,8 +81,67 @@
                 <div class="col-md-8">
                     <h2 class="mb-4">About Me</h2>
                     <p>
-                        I am a Ph.D. student in Computer Science at the University of Maryland, Baltimore County. My research bridges Neurosymbolic AI and Retrieval-Augmented Generation (RAG) to build trustworthy language agents. I focus on making the generation pipeline transparent and verifiable, developing citation schemes and interpretable architectures that balance coverage with correctness. Beyond core research, I am active in the hackathon community and enjoy mentoring undergraduate students to help turn theoretical ideas into practical tools.
+                        I am a Ph.D. student in Computer Science at the University of Maryland, Baltimore County and a Visiting Research Intern at TIB Hannover in Summer 2026. My research focuses on trustworthy AI systems for sensitive domains, where retrieval, evidence selection, and attribution failures can affect the reliability of generated answers. I build IKnowFlow, a framework for making knowledge flow auditable across stages: why a document was retrieved, why it was selected as evidence, and whether a generated claim can be traced back to that evidence. My work spans interpretable dense retrieval with IMRNNs, rationale-driven evidence selection with METEORA, attribution benchmarking with REASONS, and provenance-aware verification using structured scholarly knowledge graphs.
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publication Venues Marquee -->
+    <section id="publication-venues" class="venue-section py-5">
+        <div class="container">
+            <div class="venue-heading">
+                <h2>Works Published In</h2>
+            </div>
+        </div>
+        <div class="venue-marquee">
+            <div class="venue-track">
+                <div class="venue-set">
+                    <a href="publications.html#publications" class="venue-logo venue-ijcai" aria-label="View IJCAI-ECAI publication">
+                        <img src="images/IJCAI_logo.png" alt="IJCAI-ECAI 2026">
+                    </a>
+                    <a href="publications.html#publications" class="venue-logo venue-icml" aria-label="View ICML publication">
+                        <img src="images/ICML_logo.png" alt="ICML">
+                    </a>
+                    <a href="publications.html#publications" class="venue-logo venue-eacl" aria-label="View EACL Findings publication">
+                        <img src="images/EACL_logo.png" alt="EACL 2026">
+                    </a>
+                    <a href="publications.html#publications" class="venue-logo venue-ieee" aria-label="View IEEE Intelligent Systems publication">
+                        <img src="images/ieee-logo.webp" alt="IEEE">
+                    </a>
+                    <a href="publications.html#publications" class="venue-logo venue-wiley" aria-label="View Wiley book chapter">
+                        <img src="images/Wiley_logo.png" alt="Wiley">
+                    </a>
+                    <a href="publications.html#publications" class="venue-logo venue-neurips" aria-label="View NeurIPS workshop publication">
+                        <img src="images/Neurips_logo.svg" alt="NeurIPS">
+                    </a>
+                    <a href="publications.html#publications" class="venue-logo venue-aaai" aria-label="View AAAI publication">
+                        <img src="images/AAAI_logo.jpeg" alt="AAAI">
+                    </a>
+                </div>
+                <div class="venue-set" aria-hidden="true">
+                    <a href="publications.html#publications" class="venue-logo venue-ijcai" tabindex="-1">
+                        <img src="images/IJCAI_logo.png" alt="">
+                    </a>
+                    <a href="publications.html#publications" class="venue-logo venue-icml" tabindex="-1">
+                        <img src="images/ICML_logo.png" alt="">
+                    </a>
+                    <a href="publications.html#publications" class="venue-logo venue-eacl" tabindex="-1">
+                        <img src="images/EACL_logo.png" alt="">
+                    </a>
+                    <a href="publications.html#publications" class="venue-logo venue-ieee" tabindex="-1">
+                        <img src="images/ieee-logo.webp" alt="">
+                    </a>
+                    <a href="publications.html#publications" class="venue-logo venue-wiley" tabindex="-1">
+                        <img src="images/Wiley_logo.png" alt="">
+                    </a>
+                    <a href="publications.html#publications" class="venue-logo venue-neurips" tabindex="-1">
+                        <img src="images/Neurips_logo.svg" alt="">
+                    </a>
+                    <a href="publications.html#publications" class="venue-logo venue-aaai" tabindex="-1">
+                        <img src="images/AAAI_logo.jpeg" alt="">
+                    </a>
                 </div>
             </div>
         </div>
@@ -104,27 +152,126 @@
         <div class="container">
             <div class="row g-4 text-center">
                 <div class="col-md-4">
+                    <a href="publications.html#publications" class="stats-link" aria-label="View publications">
                     <div class="counter-card h-100">
                         <div class="icon"><i class="fas fa-book-open"></i></div>
-                        <div class="counter" data-target="8">0</div>
+                        <div class="counter" data-target="9">9</div>
                         <p class="mt-2">Publications</p>
+                        <span class="card-action">View papers</span>
                     </div>
+                    </a>
                 </div>
                 <div class="col-md-4">
+                    <a href="publications.html#presentations" class="stats-link" aria-label="View presentations">
                     <div class="counter-card h-100">
                         <div class="icon"><i class="fas fa-microphone"></i></div>
-                        <div class="counter" data-target="2">0</div>
+                        <div class="counter" data-target="2">2</div>
                         <p class="mt-2">Presentations</p>
+                        <span class="card-action">View talks</span>
                     </div>
+                    </a>
                 </div>
                 <div class="col-md-4">
+                    <a href="experience.html#awards" class="stats-link" aria-label="View awards and recognitions">
                     <div class="counter-card h-100">
                         <div class="icon"><i class="fas fa-trophy"></i></div>
-                        <div class="counter" data-target="3">0</div>
+                        <div class="counter" data-target="5">5</div>
                         <p class="mt-2">Awards</p>
+                        <span class="card-action">View recognitions</span>
                     </div>
+                    </a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Recent News Section -->
+    <section id="recent-news" class="py-5">
+        <div class="container">
+            <div class="home-section-header">
+                <div>
+                    <h2>Recent News</h2>
+                    <p class="section-kicker mb-0">A linked timeline of current research updates, talks, and coverage.</p>
+                </div>
+                <a href="publications.html" class="btn btn-outline-accent btn-sm">All publications</a>
+            </div>
+            <section class="news-scroll" aria-label="Recent news updates" tabindex="0">
+                <article class="news-item">
+                    <div class="news-date">
+                        <span>Summer</span>
+                        <strong>2026</strong>
+                    </div>
+                    <div class="news-copy">
+                        <h5>Visiting Research Intern at TIB Hannover</h5>
+                        <p>Working with Prof. Sören Auer on provenance and attribution methods for the Open Research Knowledge Graph.</p>
+                        <div class="news-links">
+                            <a href="https://www.tib.eu/en/research-development/open-research-knowledge-graph" target="_blank" rel="noopener">ORKG at TIB <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://vivo.tib.eu/fis/display/n0000-0002-0698-2864" target="_blank" rel="noopener">Prof. Sören Auer <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            <a href="experience.html#experience">Experience</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-date">
+                        <span>Jun</span>
+                        <strong>2026</strong>
+                    </div>
+                    <div class="news-copy">
+                        <h5>IJCAI-ECAI Doctoral Consortium acceptance</h5>
+                        <p>IKnowFlow was accepted to the IJCAI-ECAI 2026 Doctoral Consortium in Bremen, Germany, with travel grant support.</p>
+                        <div class="news-links">
+                            <a href="https://2026.ijcai.org/ijcai-ecai-2026-call-for-dc-paprs/" target="_blank" rel="noopener">Doctoral Consortium <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            <a href="publications.html#publications">Publication entry</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-date">
+                        <span>May</span>
+                        <strong>2026</strong>
+                    </div>
+                    <div class="news-copy">
+                        <h5>METEORA accepted at ICML 2026</h5>
+                        <p>METEORA reframes re-ranking as rationale-driven evidence selection for safer and more interpretable RAG in sensitive domains.</p>
+                        <div class="news-links">
+                            <a href="https://www.linkedin.com/posts/yash-saxena-a18b251bb_icml2026-eacl2026-machinelearning-activity-7457478549927694336-a0TI" target="_blank" rel="noopener">Announcement <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://yashsaxena21.github.io/METEORA-web/" target="_blank" rel="noopener">Project website <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://arxiv.org/abs/2505.16014" target="_blank" rel="noopener">Preprint <i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-date">
+                        <span>Apr</span>
+                        <strong>2025</strong>
+                    </div>
+                    <div class="news-copy">
+                        <h5>REASONS benchmark covered by The Conversation</h5>
+                        <p>Coverage of attribution-based reasoning results comparing OpenAI o1 and DeepSeek R1, including hallucination behavior on sentence-level citation tasks.</p>
+                        <div class="news-links">
+                            <a href="https://theconversation.com/popular-ais-head-to-head-openai-beats-deepseek-on-sentence-level-reasoning-249109" target="_blank" rel="noopener">The Conversation <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://umbc.edu/stories/openai-beats-deepseek-on-sentence-level-reasoning/" target="_blank" rel="noopener">UMBC Magazine <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://www.route-fifty.com/topic/generative-ai/" target="_blank" rel="noopener">Route Fifty listing <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            <a href="publications.html#publications">REASONS entry</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <div class="news-date">
+                        <span>Jan</span>
+                        <strong>2026</strong>
+                    </div>
+                    <div class="news-copy">
+                        <h5>IMRNNs accepted to EACL Findings 2026</h5>
+                        <p>IMRNNs introduces embedding modulation for interpretable dense retrieval and exposes human-readable query-document matching signals.</p>
+                        <div class="news-links">
+                            <a href="https://aclanthology.org/2026.findings-eacl.333/" target="_blank" rel="noopener">ACL Anthology <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://yashsaxena21.github.io/IMRNNs-web/" target="_blank" rel="noopener">Project website <i class="fas fa-arrow-up-right-from-square"></i></a>
+                            <a href="publications.html#publications">Publication entry</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
         </div>
     </section>
 
@@ -134,29 +281,29 @@
             <h2 class="mb-5 text-center">Explore My Work</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <a href="research.html" class="text-decoration-none">
+                    <a href="research.html" class="work-card-link" aria-label="Open research focus page">
                         <div class="focus-card h-100">
                             <div class="focus-icon"><i class="fas fa-flask"></i></div>
                             <h5>Research Focus</h5>
-                            <p>Explore my research areas in NeuroSymbolic AI, source attribution, and trustworthy systems.</p>
+                            <p>See the IKnowFlow thesis framing across traceability, interpretable retrieval, grounding, and provenance.</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="publications.html" class="text-decoration-none">
+                    <a href="publications.html" class="work-card-link" aria-label="Open publications page">
                         <div class="focus-card h-100">
                             <div class="focus-icon"><i class="fas fa-file-alt"></i></div>
                             <h5>Publications</h5>
-                            <p>Read my papers, book chapters, and works in progress on LLM attribution, interpretable retrieval, and trustworthy AI.</p>
+                            <p>Read papers, preprints, book chapters, and presentations on trustworthy AI systems.</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="experience.html" class="text-decoration-none">
+                    <a href="experience.html" class="work-card-link" aria-label="Open experience page">
                         <div class="focus-card h-100">
                             <div class="focus-icon"><i class="fas fa-briefcase"></i></div>
                             <h5>Experience</h5>
-                            <p>Learn about my professional journey and educational background.</p>
+                            <p>Review research roles, internships, education, awards, and current collaborations.</p>
                         </div>
                     </a>
                 </div>
@@ -165,7 +312,7 @@
     </section>
 
     <!-- Scroll to Top Button -->
-    <div id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></div>
+    <button id="scrollTopBtn" type="button" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
 
     <!-- Footer -->
     <footer class="py-4 border-top">
