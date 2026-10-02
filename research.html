@@ -56,32 +56,39 @@
     <section id="iknowflow" class="py-5">
         <div class="container">
             <h2 class="mb-4 section-heading-center">IKnowFlow: Interpretable Knowledge Flow</h2>
-            <p class="lead text-secondary text-center mb-5">
+            <p class="lead text-secondary text-center mb-3">
                 IKnowFlow is my doctoral research framework for trustworthy AI systems in sensitive domains. It treats trustworthiness as a system-level property, so retrieval origins, selection rationales, generated claims, and attribution evidence remain auditable before outputs reach end users.
             </p>
+            <div class="d-flex justify-content-center gap-2 flex-wrap mb-5">
+                <a href="https://www.ijcai.org/proceedings/2026/947" target="_blank" rel="noopener" class="btn btn-sm btn-outline-accent">IJCAI Proceedings&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a>
+                <a href="https://www.ijcai.org/proceedings/2026/0947.pdf" target="_blank" rel="noopener" class="btn btn-sm btn-outline-accent">Paper PDF&nbsp;<i class="fas fa-file-pdf"></i></a>
+            </div>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="focus-card h-100">
+                    <div class="focus-card h-100 d-flex flex-column">
                         <div class="focus-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
                         <p class="small text-secondary">Stage 1: Retrieval</p>
                         <h5>IMRNNs</h5>
                         <p><strong>Interpretability.</strong> Uses bidirectional embedding modulation to expose human-readable query-document matching signals and improve retrieval recall.</p>
+                        <p class="mt-auto pt-3"><a href="https://pypi.org/project/imrnns/" target="_blank" rel="noopener">Python package (PyPI)&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a></p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="focus-card h-100">
+                    <div class="focus-card h-100 d-flex flex-column">
                         <div class="focus-icon"><i class="fas fa-list-check"></i></div>
                         <p class="small text-secondary">Stage 2: Evidence Selection</p>
                         <h5>METEORA</h5>
                         <p><strong>Grounding.</strong> Replaces opaque score-based re-ranking with preference-tuned rationales, adaptive chunk selection, and verification.</p>
+                        <p class="mt-auto pt-3"><a href="https://yashsaxena21.github.io/METEORA-web/" target="_blank" rel="noopener">Project website&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a></p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="focus-card h-100">
+                    <div class="focus-card h-100 d-flex flex-column">
                         <div class="focus-icon"><i class="fas fa-diagram-project"></i></div>
                         <p class="small text-secondary">Stage 3: Attribution and Verification</p>
                         <h5>REASONS</h5>
                         <p><strong>Traceability.</strong> Diagnoses citation and attribution failures across 20,000 scientific papers and 12 domains, showing errors persist even with retrieval augmentation.</p>
+                        <p class="mt-auto pt-3"><a href="https://zenodo.org/records/18264033" target="_blank" rel="noopener">Dataset (Zenodo)&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a></p>
                     </div>
                 </div>
             </div>

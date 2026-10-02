@@ -85,15 +85,15 @@
             <div class="row g-4">
                 <!-- IJCAI-ECAI Doctoral Consortium -->
                 <div class="col-md-6">
-                    <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+                    <div id="publication-iknowflow" class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
                         <div class="conference-badge">
                             <i class="fas fa-certificate"></i>
                             <span>IJCAI-ECAI DC 2026</span>
                         </div>
-                        <h5 class="mb-3">IKnowFlow: Trustworthy RAG for Sensitive Domains</h5>
+                        <h5 class="mb-3"><a href="https://www.ijcai.org/proceedings/2026/947" target="_blank" rel="noopener" class="text-decoration-none">IKnowFlow: Trustworthy RAG for Sensitive Domains</a></h5>
                         <p class="small text-secondary mb-2"><strong>Authors:</strong> Yash Saxena</p>
                         <p class="small mb-2"><strong>IJCAI-ECAI 2026 Doctoral Consortium, Bremen, Germany. Travel grant awarded.</strong></p>
-                        <p class="small flex-grow-1">This doctoral consortium submission presents IKnowFlow, a framework for operationalizing trustworthiness in AI systems through traceability, interpretability, and grounding. The work connects REASONS, IMRNNs, and METEORA into a unified thesis direction and outlines future work on negation-aware retrieval and provenance-aware verification through structured source graphs.</p>
+                        <p class="small flex-grow-1">This doctoral consortium paper presents IKnowFlow, a framework for operationalizing trustworthiness in AI systems through traceability, interpretability, and grounding. The work connects REASONS, IMRNNs, and METEORA into a unified thesis direction and outlines future work on negation-aware retrieval and provenance-aware verification through structured source graphs.</p>
                         <p class="small mb-3">
                             <span class="badge me-1">AI systems</span>
                             <span class="badge me-1">trustworthy AI</span>
@@ -101,7 +101,9 @@
                             <span class="badge me-1">attribution</span>
                             <span class="badge">doctoral consortium</span>
                         </p>
-                        <div class="mt-auto text-end">
+                        <div class="mt-auto d-flex justify-content-end gap-2 flex-wrap">
+                            <a href="https://www.ijcai.org/proceedings/2026/947" target="_blank" rel="noopener" class="btn btn-sm btn-outline-accent">IJCAI Proceedings&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://www.ijcai.org/proceedings/2026/0947.pdf" target="_blank" rel="noopener" class="btn btn-sm btn-outline-accent">Paper PDF&nbsp;<i class="fas fa-file-pdf"></i></a>
                             <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-iknowflow">Read more</button>
                         </div>
                     </div>
@@ -132,7 +134,7 @@
 
                 <!-- IMRNNs -->
                 <div class="col-md-6">
-                    <div class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
+                    <div id="publication-imrnns" class="publication-card p-4 shadow-sm rounded h-100 d-flex flex-column">
                         <div class="conference-badge">
                             <i class="fas fa-certificate"></i>
                             <span>EACL Findings 2026</span>
@@ -147,6 +149,7 @@
                         </p>
                         <div class="mt-auto d-flex justify-content-end gap-2 flex-wrap">
                             <a href="https://yashsaxena21.github.io/IMRNNs-web/" target="_blank" class="btn btn-sm btn-outline-accent">Project Website&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://pypi.org/project/imrnns/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-accent">Python Package (PyPI)&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a>
                             <button class="btn btn-sm btn-outline-accent" data-bs-toggle="modal" data-bs-target="#modal-imrnns">Read more</button>
                         </div>
                     </div>
@@ -286,7 +289,7 @@
             <div class="row g-4">
                 <!-- Attribution in Scientific Literature -->
                 <div class="col-md-6">
-                    <div class="publication-card p-4 shadow-sm rounded h-100">
+                    <div id="publication-reasons" class="publication-card p-4 shadow-sm rounded h-100">
                         <div class="conference-badge in-preparation">
                             <i class="fas fa-flask"></i>
                             <span>In Preparation</span>
@@ -294,11 +297,14 @@
                         <h6 class="mb-2">REASONS: Attribution in Scientific Literature</h6>
                         <p class="small mb-3">REASONS is a benchmark for evaluating source attribution in generated scientific text across 20,000 scientific papers and 12 domains. It measures whether model-generated claims can be traced to the right scholarly evidence and where attribution failures persist under retrieval augmentation.</p>
                         <p class="small mb-3"><strong>Media Coverage:</strong> Findings from this benchmark, including the comparison of DeepSeek R1 and OpenAI o1 on attribution tasks, were published in <a href="https://theconversation.com/popular-ais-head-to-head-openai-beats-deepseek-on-sentence-level-reasoning-249109" target="_blank" rel="noopener" class="text-decoration-none">The Conversation&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a> and syndicated in UMBC News, TechXplore, and Route Fifty. The reported hallucination rate was about 85% for DeepSeek R1 compared to about 35% for OpenAI o1.</p>
-                        <p class="small mb-0">
+                        <p class="small mb-3">
                             <span class="badge me-1">source attribution</span>
                             <span class="badge me-1">benchmarking</span>
                             <span class="badge">citations</span>
                         </p>
+                        <div class="d-flex justify-content-end gap-2 flex-wrap">
+                            <a href="https://zenodo.org/records/18264033" target="_blank" rel="noopener" class="btn btn-sm btn-outline-accent">Dataset (Zenodo)&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -312,13 +318,17 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalIknowflowLabel">IKnowFlow: Trustworthy AI Systems for Sensitive Domains</h5>
+                    <h5 class="modal-title" id="modalIknowflowLabel">IKnowFlow: Trustworthy RAG for Sensitive Domains</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <p>IKnowFlow is the doctoral thesis framework connecting my work on attribution, interpretable retrieval, and evidence grounding. The framework treats trustworthiness as a pipeline property: retrieval should be explainable, evidence selection should be justified, and generated claims should remain traceable to source material.</p>
-                    <p>The consortium submission positions REASONS, IMRNNs, and METEORA as complementary pieces of that pipeline, then outlines future work on negation-aware retrieval and provenance-aware verification through structured source graphs.</p>
-                    <p class="mb-0"><strong>Venue:</strong> IJCAI-ECAI 2026 Doctoral Consortium, Bremen, Germany. Travel grant awarded.</p>
+                    <p>The doctoral consortium paper positions REASONS, IMRNNs, and METEORA as complementary pieces of that pipeline, then outlines future work on negation-aware retrieval and provenance-aware verification through structured source graphs.</p>
+                    <p><strong>Venue:</strong> IJCAI-ECAI 2026 Doctoral Consortium, Bremen, Germany. Travel grant awarded.</p>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a href="https://www.ijcai.org/proceedings/2026/947" target="_blank" rel="noopener" class="btn btn-sm btn-outline-accent">IJCAI Proceedings&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://www.ijcai.org/proceedings/2026/0947.pdf" target="_blank" rel="noopener" class="btn btn-sm btn-outline-accent">Paper PDF&nbsp;<i class="fas fa-file-pdf"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -352,7 +362,10 @@
                 <div class="modal-body">
                     <p>IMRNNs addresses a central limitation of dense retrieval: retrieved documents are scored through opaque embedding similarity, making it difficult to understand why a document matched a query. The method adds lightweight query and document adapters over a frozen dense retriever, allowing representations to be modulated dynamically at inference time.</p>
                     <p>The interpretability contribution comes from analyzing how embeddings move after modulation and projecting those changes back into semantic directions associated with the base encoder. This gives users a way to inspect which concepts were emphasized or suppressed during retrieval.</p>
-                    <p class="mb-0"><a href="https://aclanthology.org/2026.findings-eacl.333/" target="_blank" class="text-decoration-none">View on ACL Anthology&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a></p>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a href="https://aclanthology.org/2026.findings-eacl.333/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-accent">ACL Anthology&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://pypi.org/project/imrnns/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-accent">Python Package (PyPI)&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

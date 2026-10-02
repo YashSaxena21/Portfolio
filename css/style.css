@@ -1088,6 +1088,10 @@ body.dark-mode #hero .lead {
     overflow: hidden;
 }
 
+.publication-card[id] {
+    scroll-margin-top: 100px;
+}
+
 .publication-card::before,
 .presentation-card::before {
     content: '';
