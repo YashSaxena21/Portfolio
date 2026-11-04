@@ -129,6 +129,10 @@ section.bg-alternate {
     padding-top: 3.5rem !important;
 }
 
+.fixed-page-header {
+    margin-top: 80px;
+}
+
 @media (max-width: 575.98px) {
     .page-header {
         padding-top: 2.25rem !important;
@@ -1088,8 +1092,24 @@ body.dark-mode #hero .lead {
     overflow: hidden;
 }
 
+#publications,
+#presentations,
 .publication-card[id] {
     scroll-margin-top: 100px;
+}
+
+.presentation-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.presentation-card > a {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+#dckg {
+    scroll-margin-top: 80px;
 }
 
 .publication-card::before,
@@ -1271,6 +1291,48 @@ body.dark-mode #hero .lead {
 .modal-body {
     color: var(--text-secondary);
     line-height: 1.8;
+}
+
+/* Contact */
+#contact {
+    margin-top: 80px;
+    min-height: calc(100vh - 120px);
+}
+
+.contact-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border) !important;
+    border-radius: 16px;
+}
+
+.contact-email-icon {
+    background: var(--hero-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-email {
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+.contact-divider {
+    border-color: var(--card-border);
+    margin: 2rem 0;
+}
+
+.contact-card .social-icons i {
+    color: var(--accent);
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .btn-close {
+    filter: invert(1);
+}
+
+body.modal-open #scrollTopBtn {
+    display: none;
 }
 
 /* Scroll to Top Button - Stylish */

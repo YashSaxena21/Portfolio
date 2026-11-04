@@ -17,14 +17,14 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Custom styles -->
-    <link rel="stylesheet" href="css/style.css?v=research-nav-layout-20260612">
+    <link rel="stylesheet" href="css/style.css?v=20261104-deploy">
 </head>
 <body>
     <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">Yash Saxena</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -87,8 +87,8 @@
                         <div class="focus-icon"><i class="fas fa-diagram-project"></i></div>
                         <p class="small text-secondary">Stage 3: Attribution and Verification</p>
                         <h5>REASONS</h5>
-                        <p><strong>Traceability.</strong> Diagnoses citation and attribution failures across 20,000 scientific papers and 12 domains, showing errors persist even with retrieval augmentation.</p>
-                        <p class="mt-auto pt-3"><a href="https://zenodo.org/records/18264033" target="_blank" rel="noopener">Dataset (Zenodo)&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a></p>
+                        <p><strong>Traceability.</strong> Evaluates hallucination and abstention through 12,723 sentence-level citation instances across 12 scientific domains. Accepted at IEEE DSAA 2026 for an oral presentation.</p>
+                        <p class="mt-auto pt-3"><a href="publications.html#publication-reasons">IEEE DSAA paper</a> | <a href="https://zenodo.org/records/18264033" target="_blank" rel="noopener">Dataset (Zenodo)&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a></p>
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                         <p class="small text-secondary">RQ1</p>
                         <h5>Traceability</h5>
                         <p>How can source-attribution failures be diagnosed across model families and domains?</p>
-                        <p class="mt-3"><strong>Progress:</strong> REASONS benchmarks 20,000 scientific papers across 12 domains, and related citation work shows post-hoc verification reaches 78% human-evaluated correctness versus 69% for generation-time citation.</p>
+                        <p class="mt-3"><strong>Progress:</strong> REASONS measures hallucination and abstention in scientific source attribution. Related citation work shows post-hoc verification reaches 78% human-evaluated correctness versus 69% for generation-time citation.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
@@ -118,7 +118,7 @@
                         <p class="small text-secondary">RQ2</p>
                         <h5>Interpretable Retrieval</h5>
                         <p>How can dense retrievers expose why a clinical, legal, or scientific document was selected?</p>
-                        <p class="mt-3"><strong>Progress:</strong> IMRNNs adds lightweight adapters for query-document embedding modulation, yielding +7.14% recall across seven benchmarks while exposing readable matching signals.</p>
+                        <p class="mt-3"><strong>Progress:</strong> IMRNNs adds lightweight adapters for query-document embedding modulation, yielding +7.14% recall across seven benchmarks while exposing readable matching signals. Its Python package includes pretrained assets and reproducible training and evaluation workflows.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
@@ -136,7 +136,26 @@
                         <p class="small text-secondary">RQ4</p>
                         <h5>Provenance</h5>
                         <p>How should attribution preserve how evidence originates, evolves, validates, or contradicts claims over time?</p>
-                        <p class="mt-3"><strong>Next step:</strong> Provenance-aware verification will use claim-level source graphs with typed relations such as extends, validates, contradicts, and summarizes.</p>
+                        <p class="mt-3"><strong>Progress:</strong> DCKG connects scholarly entities and agent-generated relations to support interpretable, AI-guided literature exploration. Claim-level provenance-aware verification remains an ongoing research direction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scholarly Research Section -->
+    <section id="dckg" class="py-5">
+        <div class="container">
+            <h2 class="mb-4 section-heading-center">Dynamic Cognitive Knowledge Graphs</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <p class="lead text-secondary">Knowledge-grounded AI agents for scientific discovery.</p>
+                    <p>DCKG connects AI agents with structured scholarly knowledge so they can explore relationships across scientific literature. It represents papers through fine-grained entities and agent-generated inter-paper relations, drawing on the Open Research Knowledge Graph.</p>
+                    <p>Developed for TIB AIssistant research workflows, the graph supports literature analysis, research-gap discovery, hypothesis generation, and experiment planning by making connections between papers explicit and available as context for AI agents.</p>
+                    <div class="d-flex gap-2 flex-wrap mt-4">
+                        <a href="publications.html#publication-dckg" class="btn btn-sm btn-outline-accent">Project Details</a>
+                        <a href="https://aissistant.tib.eu/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-accent">TIB AIssistant&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://www.tib.eu/en/research-development/open-research-knowledge-graph" target="_blank" rel="noopener" class="btn btn-sm btn-outline-accent">ORKG&nbsp;<i class="fas fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
