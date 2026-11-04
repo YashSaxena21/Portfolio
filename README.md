@@ -80,6 +80,12 @@ portfolio/
 - Scroll-to-top button
 - Tilt effect on research cards (desktop only)
 
+### Analytics
+- All five pages load the shared `js/analytics.js` initializer.
+- Collection uses `G-XNBDDZ4B31` only on `https://yashsaxena21.github.io/Portfolio/`; local and preview hosts do not load the Google tag.
+- GA4 sends page views automatically. Do not add a second manual `page_view` event or reintroduce the old Contact-only snippet.
+- Run the regression tests with `node --test tests/analytics.test.cjs`.
+
 ### Responsive Design
 - Mobile-friendly navigation
 - Optimized layouts for all screen sizes
